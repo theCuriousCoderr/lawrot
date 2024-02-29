@@ -38,7 +38,7 @@ function App() {
   return (
     <div className="bg-slate-900 px-3 py-8 h-screen ">
       <header className="space-y-1">
-        <h1 className="font-bold text-slate-300 text-2xl">
+        <h1 className="font-bold text-slate-300 text-3xl">
           Olalekan Oladimeji
         </h1>
         <h2 className="text-slate-400 text-base font-semibold">
@@ -50,7 +50,7 @@ function App() {
       </header>
 
       <div className="my-5">
-        <a href={CV} download className="font-bold text-base text-emerald-900 bg-emerald-400 px-5 py-2 rounded-md"><span>Download Resume</span></a>
+        <a href={CV} download='Olalekan Oladimeji Resume' className="font-bold text-base text-emerald-900 bg-emerald-400 px-5 py-2 rounded-md"><span>Download Resume</span></a>
       </div>
 
       <div className="space-y-2 mt-5">
