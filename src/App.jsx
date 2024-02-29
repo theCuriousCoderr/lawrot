@@ -50,7 +50,7 @@ function App() {
       </header>
 
       <div className="my-5">
-        <a href={CV} download='Olalekan Oladimeji Resume' target="_blank" className="font-bold text-base text-emerald-900 bg-emerald-400 px-5 py-2 rounded-md"><span>Download Resume</span></a>
+        <a href={CV} download='Olalekan Oladimeji Resume' className="font-bold text-base text-emerald-900 bg-emerald-400 px-5 py-2 rounded-md"><span>Download Resume</span></a>
       </   div>
 
       <div className="space-y-2 mt-5">
@@ -63,7 +63,7 @@ function App() {
                 className="cursor-pointer text-base bg-clip-text hover:bg-gradient-to-r from-pink-500 to-violet-500 hover:text-transparent text-slate-400 flex items-end gap-2"
               >
                 <span>{id + 1}. </span>{" "}
-                <a href={projects.link}>{projects.text}</a>
+                <a href={projects.link} target="_blank">{projects.text}</a>
                 <img src={link} className="size-5" />
               </li>
             );
