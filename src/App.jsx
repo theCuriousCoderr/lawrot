@@ -3,7 +3,7 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import link from "./images/link.png";
-import CV from '../Ola_AEE_Dev_Resume.jpg';
+import CV from '../Olalekan_Oladimeji_Resume.jpg';
 
 function App() {
   const [count, setCount] = useState(0);
