@@ -50,8 +50,8 @@ function App() {
       </header>
 
       <div className="my-5">
-        <a href={CV} download='Olalekan Oladimeji Resume' className="font-bold text-base text-emerald-900 bg-emerald-400 px-5 py-2 rounded-md"><span>Download Resume</span></a>
-      </div>
+        <a href={CV} download='Olalekan Oladimeji Resume' target="_blank" className="font-bold text-base text-emerald-900 bg-emerald-400 px-5 py-2 rounded-md"><span>Download Resume</span></a>
+      </   div>
 
       <div className="space-y-2 mt-5">
         <h2 className="text-slate-300 text-xl">My hosted projects: </h2>
