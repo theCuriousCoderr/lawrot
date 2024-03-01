@@ -2,7 +2,7 @@ import React from 'react'
 
 function AboutMe() {
   return (
-    <div className='text-white bg-gradient-to-b from-green-500 to-pink-500 h-[60rem] w-full'>AboutMe</div>
+    <div id="aboutMe" className='section text-white bg-yellow-40 h-[60rem] w-full'>AboutMe</div>
   )
 }
 

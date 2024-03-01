@@ -3,13 +3,27 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import link from "./images/link.png";
-import CV from '../Olalekan_Oladimeji_Resume.jpg';
+import CV from "../Olalekan_Oladimeji_Resume.jpg";
 import MyInfo from "./components/MyInfo";
 import AboutMe from "./components/AboutMe";
 import MyExperience from "./components/MyExperience";
+import MyProjects from "./components/MyProjects";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [view, setView] = useState("aboutMe");
+
+  function getView() {
+    let sections = document.querySelectorAll(".section");
+    let target = document.querySelector(".target");
+    sections.forEach((section) => {
+      let elRect = section.getBoundingClientRect();
+      let point = target.scrollTop;
+      if (point >= elRect.top && point <= elRect.bottom) {
+        // alert(section.id);
+        setView(section.id);
+      }
+    });
+  }
 
   const projectsURL = [
     {
@@ -39,13 +53,17 @@ function App() {
   ];
 
   return (
-    <div className="bg-slate-900 px-3 py-8 h-screen xl:flex ">
-     <MyInfo />
-     <div className="xl:w-1/2 xl:h-screen xl:overflow-scroll bg-green-30">
-     <AboutMe />
-     <MyExperience />
-     </div>
-     
+    <div className="root bg-slate-900 px-3 py-8 xl:py-0 xl:h-screen xl:flex ">
+      {/* <p className="text-3xl text-yellow-500">{view}</p> */}
+      <MyInfo view={view} />
+      <div
+        onScroll={getView}
+        className="target xl:w-1/2 xl:h-screen xl:overflow-scroll xl:p-20"
+      >
+        <AboutMe />
+        <MyExperience />
+        <MyProjects />
+      </div>
 
       {/* <div className="my-5">
         <a href={CV} download='Olalekan Oladimeji Resume' className="font-bold text-base text-emerald-900 bg-emerald-400 px-5 py-2 rounded-md"><span>Download Resume</span></a>
