@@ -4,6 +4,9 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import link from "./images/link.png";
 import CV from '../Olalekan_Oladimeji_Resume.jpg';
+import MyInfo from "./components/MyInfo";
+import AboutMe from "./components/AboutMe";
+import MyExperience from "./components/MyExperience";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -36,24 +39,19 @@ function App() {
   ];
 
   return (
-    <div className="bg-slate-900 px-3 py-8 h-screen ">
-      <header className="space-y-1">
-        <h1 className="font-bold text-slate-300 text-3xl">
-          Olalekan Oladimeji
-        </h1>
-        <h2 className="text-slate-400 text-base font-semibold">
-          Full-Stack Web Developer
-        </h2>
-        <p className="text-slate-500">
-          I build responsive, optimised pixel-perfect and scalable web apps{" "}
-        </p>
-      </header>
+    <div className="bg-slate-900 px-3 py-8 h-screen xl:flex ">
+     <MyInfo />
+     <div className="xl:w-1/2 xl:h-screen xl:overflow-scroll bg-green-30">
+     <AboutMe />
+     <MyExperience />
+     </div>
+     
 
-      <div className="my-5">
+      {/* <div className="my-5">
         <a href={CV} download='Olalekan Oladimeji Resume' className="font-bold text-base text-emerald-900 bg-emerald-400 px-5 py-2 rounded-md"><span>Download Resume</span></a>
-      </   div>
+      </   div> */}
 
-      <div className="space-y-2 mt-5">
+      {/* <div className="space-y-2 mt-5">
         <h2 className="text-slate-300 text-xl">My hosted projects: </h2>
         <ol className="text-slate-300 underline-offset-2 underline list-decimal px-5 space-y-2">
           {projectsURL.map((projects, id) => {
@@ -69,7 +67,7 @@ function App() {
             );
           })}
         </ol>
-      </div>
+      </div> */}
     </div>
   );
 }
