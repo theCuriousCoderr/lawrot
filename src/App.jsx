@@ -18,8 +18,7 @@ function App() {
     sections.forEach((section) => {
       let elRect = section.getBoundingClientRect();
       let point = target.scrollTop;
-      if (point >= elRect.top && point <= elRect.bottom) {
-        // alert(section.id);
+      if ((point >= elRect.top) && (point <= elRect.bottom)) {
         setView(section.id);
       }
     });
@@ -53,12 +52,11 @@ function App() {
   ];
 
   return (
-    <div className="root bg-slate-900 px-3 py-8 xl:py-0 xl:h-screen xl:flex ">
-      {/* <p className="text-3xl text-yellow-500">{view}</p> */}
+    <div className="root bg-slate-900 px-5 py-8 xl:py-0 xl:h-screen xl:flex ">
       <MyInfo view={view} />
       <div
         onScroll={getView}
-        className="target xl:w-1/2 xl:h-screen xl:overflow-scroll xl:p-20"
+        className="target xl:w-1/2 xl:h-screen xl:overflow-scroll xl:p-20 no-scrollbar"
       >
         <AboutMe />
         <MyExperience />

@@ -5,3 +5,18 @@
 h1, h2, p, a {
   font-family: 'Inter', sans-serif;
 }
+
+/* .no-scrollbar::-webkit-scrollbar {
+  display: hidden;
+} */
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+}
+.no-scrollbar{
+  scrollbar-width: none;
+}
