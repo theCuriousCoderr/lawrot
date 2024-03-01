@@ -8,20 +8,33 @@ import MyInfo from "./components/MyInfo";
 import AboutMe from "./components/AboutMe";
 import MyExperience from "./components/MyExperience";
 import MyProjects from "./components/MyProjects";
+import experienceData from "./utils/experience";
 
 function App() {
   const [view, setView] = useState("aboutMe");
+  const [expLen, setExpLen] = useState(3)
 
-  function getView() {
+  function getView(id) {
+    let windowHeight = window.innerHeight
     let sections = document.querySelectorAll(".section");
-    let target = document.querySelector(".target");
+    let target = document.querySelector(`.${id}`);
     sections.forEach((section) => {
       let elRect = section.getBoundingClientRect();
-      let point = target.scrollTop;
+      let point = target.getBoundingClientRect().top + windowHeight ;
       if ((point >= elRect.top) && (point <= elRect.bottom)) {
         setView(section.id);
       }
     });
+
+    let last = document.getElementById('last')
+    let lastRect = last.getBoundingClientRect()
+    if (lastRect.top < windowHeight) {
+      // alert(last.id)
+      // alert(6)
+      if (expLen <= experienceData.length - 1) {
+        setExpLen(prevLen => setExpLen(prevLen + 3))
+      }
+    }
   }
 
   const projectsURL = [
@@ -52,15 +65,15 @@ function App() {
   ];
 
   return (
-    <div className="root bg-slate-900 px-5 py-8 xl:py-0 xl:h-screen xl:flex ">
+    <div onScroll={() => getView('root')} className="root h-screen overflow-scroll bg-slate-900 px-5 py-8 xl:py-0 xl:h-screen xl:flex ">
       <MyInfo view={view} />
       <div
-        onScroll={getView}
+        onScroll={() => getView('target')}
         className="target xl:w-1/2 xl:h-screen xl:overflow-scroll xl:p-20 no-scrollbar"
       >
-        <AboutMe />
-        <MyExperience />
-        <MyProjects />
+        <AboutMe view={view} />
+        <MyExperience view={view} expLen={expLen} />
+        <MyProjects view={view} />
       </div>
 
       {/* <div className="my-5">

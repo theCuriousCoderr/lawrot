@@ -1,36 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import experienceData from "../utils/experience";
 
-function MyExperience() {
-  const experience = [
-    {
-      period: { start: "JULY", end: "DEC 2016" },
-      role: "Software Engineer",
-      company: "Stary",
-      desc: "practices. I thrive in dynaamic environments where collaboartion and innovation drive success, leveraging agile methodologies to deliver high-quality solutions that exceeds client expectations",
-      tools: ["HTML", "CSS", "JavaScript"],
-    },
-    {
-      period: { start: "JULY", end: "DEC 2016" },
-      role: "Software Engineer",
-      company: "Stary",
-      desc: "practices. I thrive in dynaamic environments where collaboartion and innovation drive success, leveraging agile methodologies to deliver high-quality solutions that exceeds client expectations",
-      tools: ["HTML", "CSS", "JavaScript", "MongoDB", "Java", "SQL", "Node"],
-    },
-    {
-      period: { start: "JULY", end: "DEC 2016" },
-      role: "Software Engineer",
-      company: "Stary",
-      desc: "practices. I thrive in dynaamic environments where collaboartion and innovation drive success, leveraging agile methodologies to deliver high-quality solutions that exceeds client expectations",
-      tools: ["Java", "SQL", "Node"],
-    },
-  ];
+
+function MyExperience({view, expLen}) {
+  const [experience, setExperience] = useState('')
+
+  useEffect(() => {
+    setExperience(experienceData.slice(0,expLen))
+  }, [expLen])
+
+
+  
   return (
     <div id="myExperience" className="section text-white bg-blue-40 w-full mt-20">
-      <p className="mb-10">EXPERIENCE</p>
+      <p className={`font-medium font-inter  ${view === 'myExperience' ? 'sticky bg-slate-900 py-5 text-pink-500 xl:text-white -top-10 xl:relative': 'relative text-white' }`}>CAREER EXPERIENCE</p>
       <ul className="space-y-10">
-        {experience.map((items) => {
+         {experience && experience.reverse().map((items, id) => {
           return (
-            <li className="space-y-2">
+            <li id={id === experience.length-1 && "last"} className="space-y-2">
               <div className="flex items-center gap-2 text-xs text-slate-500">
                 <p>{items.period.start}</p>
                 <hr className="w-3 text-slate-500" />

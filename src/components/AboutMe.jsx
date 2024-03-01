@@ -1,9 +1,9 @@
 import React from "react";
 
-function AboutMe() {
+function AboutMe({view}) {
   return (
     <div id="aboutMe" className="section bg-yellow-40 line-clamp-[1 space-y-5">
-      <p className=" font-medium font-inter text-white">ABOUT</p>
+      <p className={`font-medium font-inter  ${view === 'aboutMe' ? 'sticky bg-slate-900 py-5 text-pink-500 xl:text-white -top-10 xl:relative': 'relative text-white' } `}>ABOUT</p>
       <p className="text-slate-500">
         With <span className="text-slate-300">2 years</span> of hands-on
         experience and technical expertise in crafting robust and user-eccentric
