@@ -15,7 +15,7 @@ function MyExperience({view, expLen}) {
   
   return (
     <div id="myExperience" className="section text-white bg-blue-40 w-full mt-10">
-      <p className={`font-medium font-inter  ${view === 'myExperience' ? 'sticky bg-slate-900 py-5 text-pink-500 xl:text-white -top-10 xl:relative': 'relative my-5' }`}>CAREER EXPERIENCE</p>
+      <p className={`xl:hidden font-medium font-inter  ${view === 'myExperience' ? 'sticky bg-slate-900 py-5 text-pink-500 xl:text-white -top-10 xl:relative': 'relative my-5' }`}>CAREER EXPERIENCE</p>
       <ul className="space-y-10">
          {experience && experience.map((items, id) => {
           return (

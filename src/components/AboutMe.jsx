@@ -49,9 +49,9 @@ function AboutSummary() {
     ]},
   ]
   return <div className="text-slate-500 space-y-5">
-    <p className="text-slate-500 font-inter">I am a developer with 2 years of hands-on experience and technical expertise in developing responsive, optimised and scalable web applications on both the Frontend and Backend.</p>
+    <p className="text-slate-500 font-[Inter">I am a developer with 2 years of hands-on experience and technical expertise in developing responsive, optimised and scalable web applications on both the Frontend and Backend.</p>
     <div className="space-y-5">
-      <p>Soft skills and hard skills I have gathered to learn and use over the years: </p>
+      <p className="font-inte">Soft skills and hard skills I have gathered to learn and use over the years: </p>
       <div className="space-y-5">
       <ul className="flex flex-wrap w-full gap-2">
        {skills[0].lang.map(item => <li className="flex flex-col gap-1 items-center justify-center bg-white rounded py-2"><img src={item.icon} className="size-8 object-contain" /><p className="text-xs text-black p-1">{item.name}</p></li>)}

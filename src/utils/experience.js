@@ -36,14 +36,14 @@ const experienceData = [
       period: { start: "SEPT 2023", end: "SEPT 2023" },
       role: "Front End Developer",
       company: "CGPA Calculator",
-      desc: "Built a university standard CGPA calculator designed after the grading system of the University of Ibadan ",
+      desc: "Built a university standard CGPA calculator designed after the CGPA grading system of the University of Ibadan.",
       tools: ["React", "TailwindCSS", "Github"],
       link: 'https://ui-cgpa-calc.onrender.com'
     },
     {
       period: { start: "NOV 2023", end: "NOV 2023" },
       role: "Full Stack Developer",
-      company: "Stutern Hackathon",
+      company: "Stutern",
       desc: "Built a full stack application that enables small businesses to efficiently manage and track payments and invoices.",
       tools: ["React", "TailwindCSS", "Express.js", "MongoDB", "Node.js", "Git/Github", "Flutterwave", "Node Mailer"],
       link: 'https://itrack-2.vercel.app'
@@ -52,7 +52,7 @@ const experienceData = [
       period: { start: "DEC 2023", end: "DEC 2023" },
       role: "Front End Developer",
       company: "Design Illustration",
-      desc: "Developed a design interaction",
+      desc: "Developed an amimation based mobile bottom nav bar design illustration.",
       tools: ["HTML", "CSS", "JavaScript", "Figma", "Animation"],
       link: 'https://twitter.com/elijahdimeji549/status/1748013457276915999?s=19'
     },
@@ -60,7 +60,7 @@ const experienceData = [
       period: { start: "DEC 2023", end: "PRESENT" },
       role: "Full Stack Developer",
       company: "Intertwined",
-      desc: "Designed, developed and deployed a web app that acts as a plaform to connect people in need of services together",
+      desc: "Designed, developed and deployed a full stack web app that acts as a plaform for people in need of manual services and requests to find and connect with service renderers..",
       tools: ["React", "TailwindCSS", "Express.js", "MongoDB", "Node.js" , "Git/Github"],
       link: 'https://intertwined-fe.vercel.app'
     },
@@ -68,7 +68,7 @@ const experienceData = [
       period: { start: "JAN 2024", end: "JAN 2024" },
       role: "Front End Developer",
       company: "Light Trail",
-      desc: "Built an animation based design ",
+      desc: "Built and deployed an animation based design illustration. ",
       tools: ["HTML", "CSS", "JavaScript", "Animation"],
       link: 'https://light-trail.vercel.app'
     },
@@ -76,7 +76,7 @@ const experienceData = [
       period: { start: "JAN 2024", end: "JAN 2024" },
       role: "Front End Developer",
       company: "Theme Switch",
-      desc: "Built an animation based design for a theme toggling switch ",
+      desc: "Built and deployed an animation based theme toggling switch ",
       tools: ["HTML", "CSS", "JavaScript", "Animation"],
       link: 'https://two-face.vercel.app'
     },
@@ -84,15 +84,15 @@ const experienceData = [
       period: { start: "JAN 2024", end: "JAN 2024" },
       role: "Front End Developer",
       company: "Talent Sync",
-      desc: "Developed a Figma file design as an assessment test",
-      tools: ["HTML", "CSS", "JavaScript", "Figma", "Github"],
+      desc: "Developed and deployed a project by following a Figma file design as a role assessment test.",
+      tools: ["HTML", "CSS", "JavaScript", "Figma", "Vercel"],
       link: 'https://twitter.com/elijahdimeji549/status/1751234121962070390?s=19'
     },
     {
       period: { start: "JAN 2024", end: "JAN 2024" },
       role: "Front End Developer",
       company: "Geegpay",
-      desc: "Developed and deployed a Figma file design as an entry project for a Front-end design challenge ",
+      desc: "Developed and deployed a Figma file design as an entry project for a Front-end design challenge.",
       tools: ["HTML", "CSS", "JavaScript", "Figma", "Animation", "Responsiveness"],
       link: 'https://twitter.com/elijahdimeji549/status/1751278326142890346?s=19'
     },
@@ -100,8 +100,8 @@ const experienceData = [
       period: { start: "JAN 2024", end: "JAN 2024" },
       role: "Front End Developer",
       company: "Bravex",
-      desc: "Designed and developed an animation based project as an evaluation test.",
-      tools: ["HTML", "CSS", "JavaScript", "Animation", "Github"],
+      desc: "Designed, developed and deployed an animation based project as a role evaluation test.",
+      tools: ["HTML", "CSS", "Animation", "Github"],
       link: 'https://bravex-demo.vercel.app'
     }
   ];
