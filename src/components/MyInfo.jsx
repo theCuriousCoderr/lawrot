@@ -2,7 +2,6 @@ import { Email, GitHub, LinkedIn, X } from "@mui/icons-material";
 import React from "react";
 
 function MyInfo({ view }) {
-
   const socialLinks = [
     { link: "https://github.com/Lambdola", icon: <GitHub /> },
     {
@@ -18,9 +17,8 @@ function MyInfo({ view }) {
       <h1 className="font-bold text-slate-300 text-3xl xl:text-[3rem] font-inter">
         Olalekan Oladimeji
       </h1>
-      <h2 className="bg-clip-text text-transparent bg-gradient-to-br from-slate-50 to-slate-700 text-lg xl:text-[1.5rem] font-inter xl:font-semibold">
+      <h2 className="bg-clip-text font-medium text-transparent bg-gradient-to-r from-pink-500 to-violet-500 text-lg xl:text-[1.5rem] font-inter xl:font-semibold">
         <p>Full-Stack Web Developer</p>
-        
       </h2>
       <p className="text-slate-500 xl:w-[80%] xl:text-xl">
         I build responsive, optimised pixel-perfect and scalable web
@@ -35,7 +33,7 @@ function MyInfo({ view }) {
             { section: "myProjects", text: "PROJECTS" },
           ].map((items) => {
             return (
-              <li className="flex items-center gap-2">
+              <li key={items.text} className="flex items-center gap-2">
                 <div
                   className={`${
                     view === items.section

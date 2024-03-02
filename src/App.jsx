@@ -32,7 +32,10 @@ function App() {
       // alert(last.id)
       // alert(6)
       if (expLen <= experienceData.length - 1) {
-        setExpLen(prevLen => setExpLen(prevLen + 3))
+        setTimeout(() => {
+          setExpLen(expLen+3)
+        }, 1500)
+        
       }
     }
   }

@@ -13,11 +13,11 @@ function MyExperience({view, expLen}) {
   
   return (
     <div id="myExperience" className="section text-white bg-blue-40 w-full mt-20">
-      <p className={`font-medium font-inter  ${view === 'myExperience' ? 'sticky bg-slate-900 py-5 text-pink-500 xl:text-white -top-10 xl:relative': 'relative text-white' }`}>CAREER EXPERIENCE</p>
+      <p className={`font-medium font-inter  ${view === 'myExperience' ? 'sticky bg-slate-900 py-5 text-pink-500 xl:text-white -top-10 xl:relative': 'relative' }`}>CAREER EXPERIENCE</p>
       <ul className="space-y-10">
          {experience && experience.reverse().map((items, id) => {
           return (
-            <li id={id === experience.length-1 && "last"} className="space-y-2">
+            <li key={items.company + items.role} id={id === experience.length-1 ? "last" : "none"} className="space-y-2">
               <div className="flex items-center gap-2 text-xs text-slate-500">
                 <p>{items.period.start}</p>
                 <hr className="w-3 text-slate-500" />
@@ -31,7 +31,7 @@ function MyExperience({view, expLen}) {
               <p className="text-slate-500">{items.desc}</p>
               <ul className="flex flex-wrap w-full gap-2 items-center">
                 {items.tools.map((skill) => (
-                  <span className="text-emerald-300 text-xs bg-emerald-600 bg-opacity-10 px-3 py-1 rounded-full">
+                  <span key={skill} className="text-emerald-300 text-xs bg-emerald-600 bg-opacity-10 px-3 py-1 rounded-full">
                     {skill}
                   </span>
                 ))}
