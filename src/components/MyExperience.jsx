@@ -15,7 +15,7 @@ function MyExperience({view, expLen}) {
   
   return (
     <div id="myExperience" className="section text-white bg-blue-40 w-full mt-10">
-      <p className={`xl:hidden font-medium font-inter  ${view === 'myExperience' ? 'sticky bg-slate-900 py-5 text-pink-500 xl:text-white -top-10 xl:relative': 'relative my-5' }`}>CAREER EXPERIENCE</p>
+      <p className={`xl:hidden font-medium font-inter  ${view === 'myExperience' ? 'sticky bg-slate-900 py-5 text-pink-500 xl:text-white -top-10 xl:relative z-10': 'relative my-5' }`}>CAREER EXPERIENCE</p>
       <ul className="space-y-10">
          {experience && experience.map((items, id) => {
           return (
@@ -29,7 +29,7 @@ function MyExperience({view, expLen}) {
                 <p>{items.role}</p>
                 <div className="w-[1px] h-4 bg-slate-200"></div>
                 <p>{items.company}</p>
-                {items.link && <a href={items.link} target='_blank' className="text-sm -rotate-45"><ArrowForward sx={{fontSize:20}} /></a> }
+                {items.link && <a href={items.link} target='_blank' className="text-sm -rotate-45 hover:text-blue-600"><ArrowForward sx={{fontSize:20}} /></a> }
               </div>
               <p className="text-slate-500 text-sm">{items.desc}</p>
               <ul className="flex flex-wrap w-full gap-2 items-center">
