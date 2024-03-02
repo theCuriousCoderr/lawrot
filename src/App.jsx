@@ -20,7 +20,7 @@ function App() {
     let target = document.querySelector(`.${id}`);
     sections.forEach((section) => {
       let elRect = section.getBoundingClientRect();
-      let point = target.getBoundingClientRect().top + windowHeight ;
+      let point = target.getBoundingClientRect().top ;
       if ((point >= elRect.top) && (point <= elRect.bottom)) {
         setView(section.id);
       }
@@ -31,11 +31,10 @@ function App() {
     if (lastRect.top < windowHeight) {
       // alert(last.id)
       // alert(6)
-      if (expLen <= experienceData.length - 1) {
+      if (expLen < experienceData.length) {
         setTimeout(() => {
           setExpLen(expLen+3)
         }, 1500)
-        
       }
     }
   }
