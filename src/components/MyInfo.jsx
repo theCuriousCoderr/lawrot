@@ -17,7 +17,7 @@ function MyInfo({ view }) {
       <h1 className="font-bold text-slate-300 text-3xl xl:text-[3rem] font-inter">
         Olalekan Oladimeji
       </h1>
-      <h2 className="bg-clip-text font-medium text-transparent bg-gradient-to-r from-pink-500 to-violet-500 text-lg xl:text-[1.5rem] font-inter xl:font-semibold">
+      <h2 className="bg-clip-text font-medium text-transparent bg-gradient-to-r from-pink-500 from-10% to-violet-500 text-lg xl:text-[1.5rem] font-inter xl:font-semibold">
         <p>Full-Stack Web Developer</p>
       </h2>
       <p className="text-slate-500 xl:w-[80%] xl:text-xl">

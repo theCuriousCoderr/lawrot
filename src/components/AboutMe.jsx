@@ -14,6 +14,7 @@ import sql from '../images/sql.jfif'
 import node from '../images/nodejs.png'
 import express from '../images/express.png'
 import flask from '../images/flask.png'
+import ts from '../images/typescript.png'
 
 function AboutSummary() {
   const skills = [
@@ -24,6 +25,7 @@ function AboutSummary() {
       {name: 'C', icon: c},
       {name: 'C++', icon: cpp},
       {name: 'Python', icon: python},
+      {name: 'TypeScript', icon: ts},
     ]}, 
     {front: [
       {name: 'React.js', icon: react},
@@ -51,7 +53,7 @@ function AboutSummary() {
     <div className="space-y-5">
       <p>Soft skills and hard skills I have gathered to learn and use over the years: </p>
       <div className="space-y-5">
-      <ul className="flex gap-2">
+      <ul className="flex flex-wrap w-full gap-2">
        {skills[0].lang.map(item => <li className="flex flex-col gap-1 items-center justify-center bg-white rounded py-2"><img src={item.icon} className="size-8 object-contain" /><p className="text-xs text-black p-1">{item.name}</p></li>)}
       </ul>
       <ul className="flex gap-2">
@@ -120,13 +122,13 @@ function AboutMe({ view }) {
   return (
     <div id="aboutMe" className={`section bg-yellow-40 line-clamp space-y-5`}>
       <div
-        className={`z-10 relative flex justify-between w-full bg-red-4  ${
+        className={`z-10 relative flex justify-between w-full ${
           view === "aboutMe"
-            ? "sticky bg-slate-900 xl:text-white -top-10 xl:relative"
+            ? "sticky bg-slate-900 xl:text-white -top-8 xl:relative"
             : "relative text-white"
         } `}
       >
-        <div className="w-52 z-10 flex justify-between relative bg-red-40">
+        <div className="w-52 z-10 flex justify-between relative">
           <div
             className={`absolute bg-gradient-to-r from-teal-500 to-pink-500 transition-all rounded-md w-24 top-2 bottom-2 ${
               summary ? "right-0" : "left-0"
@@ -134,16 +136,16 @@ function AboutMe({ view }) {
           ></div>
           <p
             onClick={() => setSummary(!summary)}
-            className={`font-medium font-inter w-24 text-center p-3 ${
-              summary ? "text-slate-600" : "text-white"
+            className={`font-medium font-inter w-24 text-center p-3 border ${
+              summary ? "text-slate-600 border-slate-800" : "text-white border-slate-900"
             } `}
           >
             ABOUT
           </p>
           <button
             onClick={() => setSummary(!summary)}
-            className={`w-24 text-center bg-red-80 ${
-              !summary ? "text-slate-600" : "text-white"
+            className={`w-24 text-center bg-red-80 border ${
+              !summary ? "text-slate-600 border-slate-800" : "text-white border-slate-900"
             } `}
           >
             SUMMARY
