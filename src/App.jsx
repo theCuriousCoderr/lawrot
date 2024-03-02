@@ -71,7 +71,7 @@ function App() {
       <MyInfo view={view} />
       <div
         onScroll={() => getView('target')}
-        className="target xl:w-1/2 xl:h-screen xl:overflow-scroll xl:p-20 no-scrollbar"
+        className="target xl:w-1/2 xl:h-screen xl:overflow-scroll xl:px-10 xl:pt-20 no-scrollbar"
       >
         <AboutMe view={view} />
         <MyExperience view={view} expLen={expLen} />

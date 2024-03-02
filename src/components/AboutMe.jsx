@@ -124,7 +124,7 @@ function AboutMe({ view }) {
       <div
         className={`z-10 relative flex justify-between w-full ${
           view === "aboutMe"
-            ? "sticky bg-slate-900 xl:text-white -top-8 xl:relative"
+            ? "sticky bg-slate-900 xl:text-white -top-8 xl:top-0 xl:relative"
             : "relative text-white"
         } `}
       >
