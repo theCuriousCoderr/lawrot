@@ -8,7 +8,7 @@ const projectsData = [
     {
       period: { start: "SEPT 2022", end: "APR 2023" },
       role: "Online Course Enrolment",
-      company: "CS50x",
+      company: "CS50x: Learning",
       desc: "Embarked on an enriching educational journey by engaging with course materials and solving challenging problems that equipped me with the fundamental and foundational knowledge and skills in Computer Science and programming.",
       tools: ["HTML", "CSS", "JavaScript", 'C', 'Python', 'SQL', 'Flask', 'Data Structures & Algorithm'],
       link: 'https://github.com/code50/109081098'
@@ -16,7 +16,7 @@ const projectsData = [
     {
       period: { start: "MAR 2023", end: "MAR 2023" },
       role: "CS50x Final Project",
-      company: "CS50x",
+      company: "CS50x Final Project",
       desc: "Designed, Developed and built my CS50x Final project, which was a simple demo implementation of a College's departmental website that exists as a means to relay information to the students of the department and visitors. ",
       tools: ["HTML", "CSS", "JavaScript", "Flask", "Github"],
       link: 'https://lambdola.github.io/aeefinalproject.github.io'
