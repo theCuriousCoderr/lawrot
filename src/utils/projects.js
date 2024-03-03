@@ -74,7 +74,7 @@ const projectsData = [
       period: { start: "JAN 2024", end: "JAN 2024" },
       photo: trail,
       company: "Light Trail",
-      desc: "Built and deployed an animation based design illustration. ",
+      desc: "An animation based design illustration. ",
       tools: ["HTML", "CSS", "JavaScript", "Animation"],
       link: 'https://light-trail.vercel.app'
     },
@@ -82,7 +82,7 @@ const projectsData = [
       period: { start: "JAN 2024", end: "JAN 2024" },
       photo: toggle,
       company: "Theme Switch",
-      desc: "Built and deployed an animation based theme toggling switch ",
+      desc: "An animation based theme toggling switch ",
       tools: ["HTML", "CSS", "JavaScript", "Animation"],
       link: 'https://two-face.vercel.app'
     },
@@ -90,7 +90,7 @@ const projectsData = [
       period: { start: "JAN 2024", end: "JAN 2024" },
       photo: talentsync,
       company: "Talent Sync",
-      desc: "Developed and deployed a project by following a Figma file design as a role assessment test.",
+      desc: "A responsive landing page.",
       tools: ["HTML", "CSS", "JavaScript", "Figma", "Vercel"],
       link: 'https://talentsync-assessment-ebon.vercel.app'
     },
@@ -98,7 +98,7 @@ const projectsData = [
       period: { start: "JAN 2024", end: "JAN 2024" },
       photo: geegpay,
       company: "Geegpay",
-      desc: "Developed and deployed a Figma file design as an entry project for a Front-end design challenge.",
+      desc: "A responsive Sales Analytics dashboard design.",
       tools: ["HTML", "CSS", "JavaScript", "Figma", "Animation", "Responsiveness"],
       link: 'https://geegpay-fe-dashboard-challenge.vercel.app'
     },
@@ -106,7 +106,7 @@ const projectsData = [
       period: { start: "JAN 2024", end: "JAN 2024" },
       photo: bravex,
       company: "Bravex",
-      desc: "Designed, developed and deployed an animation based project as a role evaluation test.",
+      desc: "An animation based project that has a self-propelling meteor-trail type animation.",
       tools: ["HTML", "CSS", "Animation", "Github"],
       link: 'https://bravex-demo.vercel.app'
     }

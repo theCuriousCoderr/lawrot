@@ -1,7 +1,7 @@
 import { Email, GitHub, LinkedIn, X } from "@mui/icons-material";
 import React from "react";
 
-function MyInfo({ view }) {
+function MyInfo({ view, goTo }) {
   const socialLinks = [
     { link: "https://github.com/Lambdola", icon: <GitHub /> },
     {
@@ -33,16 +33,16 @@ function MyInfo({ view }) {
             { section: "myProjects", text: "PROJECTS" },
           ].map((items) => {
             return (
-              <li key={items.text} className="flex items-center gap-2">
+              <li key={items.text} onClick={() => goTo(items.section)} className="group flex items-center gap-2">
                 <div
-                  className={`${
+                  className={`group-hover:w-16 group-hover:bg-white ${
                     view === items.section
                       ? "w-16 bg-white"
                       : "w-5 bg-slate-500"
                   } h-[.2px] transition-all`}
                 ></div>
                 <p
-                  className={`${
+                  className={`group-hover:font-semibold group-hover:text-slate-300 ${
                     view === items.section
                       ? "font-semibold text-slate-300"
                       : "font-normal text-slate-500"

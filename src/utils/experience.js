@@ -45,7 +45,7 @@ const experienceData = [
       role: "Full Stack Developer",
       company: "Stutern",
       desc: "Built a full stack application that enables small businesses to efficiently manage and track payments and invoices.",
-      tools: ["React", "TailwindCSS", "Express.js", "MongoDB", "Node.js", "Git/Github", "Flutterwave", "Node Mailer"],
+      tools: ["React", "TailwindCSS", "Dashboard Design" ,  "Express.js", "MongoDB", "Node.js", "Git/Github", "Flutterwave", "Node Mailer"],
       link: 'https://itrack-2.vercel.app'
     },
     {
@@ -93,7 +93,7 @@ const experienceData = [
       role: "Front End Developer",
       company: "Geegpay",
       desc: "Developed and deployed a Figma file design as an entry project for a Front-end design challenge.",
-      tools: ["HTML", "CSS", "JavaScript", "Figma", "Animation", "Responsiveness"],
+      tools: ["HTML", "CSS", "JavaScript", "Figma", "Dashboard Design" , "Animation", "Responsiveness"],
       link: 'https://twitter.com/elijahdimeji549/status/1751278326142890346?s=19'
     },
     {
