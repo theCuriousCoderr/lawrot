@@ -72,12 +72,12 @@ function MyProjects({ view }) {
         })}
       </ul>
 
-      <div className="my-5">
+      <div className="my-10 group">
         <NavLink
           to="/project-archive"
-          className="text -rotate-45 hover:text-blue-600"
+          className="text -rotate-45 text-slate-300 hover:text-blue-600 p-2 bg-red-30"
         >
-          View Full Project Archive
+          <span className="group-hover:mr-2 mr-1 group-hover:underline underline-offset-8 transition-all">View Full Project Archive</span>
           <ArrowForward sx={{ fontSize: 20 }} />
         </NavLink>
       </div>
