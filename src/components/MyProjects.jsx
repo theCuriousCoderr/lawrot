@@ -18,11 +18,11 @@ function MyProjects({ view }) {
       >
         PROJECTS
       </p>
-      <ul className="space-y-16">
+      <ul className="space-y-10">
         {projects.slice(0, 5).map((items) => {
           return (
             <li className="text-center group space-y-2 xl:flex xl:space-y-0 xl:items-start xl:justify-between xl:hover:bg-teal-800 xl:hover:bg-opacity-10 xl:p-3 rounded-md">
-              <div className="flex justify-center w-full gap-2 xl:w-[30%] xl:justify-start bg-red-40 ">
+              <div onClick={() => window.open(items.link, '_blank')} className="bg-red-30 flex justify-center w-full gap-2 xl:w-[30%] xl:justify-start bg-red-40 ">
                 <div className="bg-red-40 w-48 xl:w-auto aspect-video xl:aspect-auto xl:justify-end hidden xl:flex">
                   <img
                     src={items.photo || items.role}
