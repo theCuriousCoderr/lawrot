@@ -1,74 +1,112 @@
 import React, { useState } from "react";
-import html from '../images/html.jfif'
-import css from '../images/css.png'
-import js from '../images/javascript.png'
-import c from '../images/C.png'
-import cpp from '../images/C++.png'
-import python from '../images/python.jfif'
-import react from '../images/react.png'
-import angular from '../images/angular.png'
-import next from '../images/next.png'
-import tailwind from '../images/tailwind.png'
-import mongo from '../images/mongo.jfif'
-import sql from '../images/sql.jfif'
-import node from '../images/nodejs.png'
-import express from '../images/express.png'
-import flask from '../images/flask.png'
-import ts from '../images/typescript.png'
+import html from "../images/html.jfif";
+import css from "../images/css.png";
+import js from "../images/javascript.png";
+import c from "../images/C.png";
+import cpp from "../images/C++.png";
+import python from "../images/python.jfif";
+import react from "../images/react.png";
+import angular from "../images/angular.png";
+import next from "../images/next.png";
+import tailwind from "../images/tailwind.png";
+import mongo from "../images/mongo.jfif";
+import sql from "../images/sql.jfif";
+import node from "../images/nodejs.png";
+import express from "../images/express.png";
+import flask from "../images/flask.png";
+import ts from "../images/typescript.png";
 
 function AboutSummary() {
   const skills = [
-    {lang: [
-      {name: 'HTML', icon: html},
-      {name: 'CSS', icon: css},
-      {name: 'JavaScript', icon: js},
-      {name: 'C', icon: c},
-      {name: 'C++', icon: cpp},
-      {name: 'Python', icon: python},
-      {name: 'TypeScript', icon: ts},
-    ]}, 
-    {front: [
-      {name: 'React.js', icon: react},
-      {name: 'Angular', icon: angular},
-      {name: 'Next.js', icon: next},
-      {name: 'Tailwind CSS', icon: tailwind},
-    ]},
-    {back: [
-      {name: 'Node.js', icon: node},
-      {name: 'Express.js', icon: express},
-      {name: 'Flask', icon: flask},
-    ]},
-    {database: [
-      {name: 'MongoDB', icon: mongo},
-      {name: 'SQLite3', icon: sql},
-    ]},
-    {cloud: [
-      {name: 'Git', icon: "lop"},
-      {name: 'GitHub', icon: "lop"},
-      {name: 'Vercel', icon: "lop"},
-    ]},
-  ]
-  return <div className="text-slate-500 space-y-5">
-    <p className="text-slate-500 font-[Inter">I am a developer with 2 years of hands-on experience and technical expertise in developing responsive, optimised and scalable web applications on both the Frontend and Backend.</p>
-    <div className="space-y-5">
-      <p className="font-inte">Soft skills and hard skills I have gathered to learn and use over the years: </p>
+    {
+      lang: [
+        { name: "HTML", icon: html },
+        { name: "CSS", icon: css },
+        { name: "JavaScript", icon: js },
+        { name: "C", icon: c },
+        { name: "C++", icon: cpp },
+        { name: "Python", icon: python },
+        { name: "TypeScript", icon: ts },
+      ],
+    },
+    {
+      front: [
+        { name: "React.js", icon: react },
+        { name: "Angular", icon: angular },
+        { name: "Next.js", icon: next },
+        { name: "Tailwind CSS", icon: tailwind },
+      ],
+    },
+    {
+      back: [
+        { name: "Node.js", icon: node },
+        { name: "Express.js", icon: express },
+        { name: "Flask", icon: flask },
+      ],
+    },
+    {
+      database: [
+        { name: "MongoDB", icon: mongo },
+        { name: "SQLite3", icon: sql },
+      ],
+    },
+    {
+      cloud: [
+        { name: "Git", icon: "lop" },
+        { name: "GitHub", icon: "lop" },
+        { name: "Vercel", icon: "lop" },
+      ],
+    },
+  ];
+  return (
+    <div className="text-slate-500 space-y-5">
+      <p className="text-slate-500 font-[Inter">
+        I am a developer with 2 years of hands-on experience and technical
+        expertise in developing responsive, optimised and scalable web
+        applications on both the Frontend and Backend.
+      </p>
       <div className="space-y-5">
-      <ul className="flex flex-wrap w-full gap-2">
-       {skills[0].lang.map(item => <li className="flex flex-col gap-1 items-center justify-center bg-white rounded py-2"><img src={item.icon} className="size-8 object-contain" /><p className="text-xs text-black p-1">{item.name}</p></li>)}
-      </ul>
-      <ul className="flex gap-2">
-       {skills[1].front.map(item => <li className="flex flex-col gap-1 items-center justify-center bg-white rounded py-2"><img src={item.icon} className="size-8 object-contain" /><p className="text-xs text-black p-1">{item.name}</p></li>)}
-      </ul>
-      <ul className="flex gap-2">
-       {skills[2].back.map(item => <li className="flex flex-col gap-1 items-center justify-center bg-white rounded py-2"><img src={item.icon} className="size-8 object-contain" /><p className="text-xs text-black p-1">{item.name}</p></li>)}
-      </ul>
-      <ul className="flex gap-2">
-       {skills[3].database.map(item => <li className="flex flex-col gap-1 items-center justify-center bg-white rounded py-2"><img src={item.icon} className="size-8 object-contain" /><p className="text-xs text-black p-1">{item.name}</p></li>)}
-      </ul>
+        <p className="font-inte">
+          Soft skills and hard skills I have gathered to learn and use over the
+          years:{" "}
+        </p>
+        <div className="space-y-5">
+          <ul className="flex flex-wrap w-full gap-2">
+            {skills[0].lang.map((item) => (
+              <li className="flex flex-col gap-1 items-center justify-center bg-white rounded py-2">
+                <img src={item.icon} className="size-8 object-contain" />
+                <p className="text-xs text-black p-1">{item.name}</p>
+              </li>
+            ))}
+          </ul>
+          <ul className="flex gap-2">
+            {skills[1].front.map((item) => (
+              <li className="flex flex-col gap-1 items-center justify-center bg-white rounded py-2">
+                <img src={item.icon} className="size-8 object-contain" />
+                <p className="text-xs text-black p-1">{item.name}</p>
+              </li>
+            ))}
+          </ul>
+          <ul className="flex gap-2">
+            {skills[2].back.map((item) => (
+              <li className="flex flex-col gap-1 items-center justify-center bg-white rounded py-2">
+                <img src={item.icon} className="size-8 object-contain" />
+                <p className="text-xs text-black p-1">{item.name}</p>
+              </li>
+            ))}
+          </ul>
+          <ul className="flex gap-2">
+            {skills[3].database.map((item) => (
+              <li className="flex flex-col gap-1 items-center justify-center bg-white rounded py-2">
+                <img src={item.icon} className="size-8 object-contain" />
+                <p className="text-xs text-black p-1">{item.name}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
-     
     </div>
-  </div>;
+  );
 }
 
 function AboutFull() {
@@ -84,11 +122,12 @@ function AboutFull() {
       </p>
       <p className="text-teal-500">
         On the front-end, I excel in crafting intuitive and responsive user
-        interfaces using HTML5, CSS3 and JavaScript, coupled with modern
-        libraries and frameworks such as React.js, Next.js and Angular. I have a
-        keen eye for design and usability, ensuring that the end products not
-        only meets functional requirements but also delights users with its
-        aesthetic appeal and seamless interaction.
+        interfaces using HTML5, CSS3 and JavaScript, coupled with modern styling
+        libraries such as TailwindCSS, MUI and also libraries and frameworks
+        such as React.js, Next.js and Angular. I have a keen eye for design and
+        usability, ensuring that the end products not only meets functional
+        requirements but also delights users with its aesthetic appeal and
+        seamless interaction.
       </p>
       <p className="text-slate-500">
         Completing my front-end skills, I possess a strong foundation in
@@ -137,7 +176,9 @@ function AboutMe({ view }) {
           <p
             onClick={() => setSummary(!summary)}
             className={`font-medium font-inter w-24 text-center p-3 border ${
-              summary ? "text-slate-600 border-slate-800" : "text-white border-slate-900"
+              summary
+                ? "text-slate-600 border-slate-800"
+                : "text-white border-slate-900"
             } `}
           >
             ABOUT
@@ -145,7 +186,9 @@ function AboutMe({ view }) {
           <button
             onClick={() => setSummary(!summary)}
             className={`w-24 text-center bg-red-80 border ${
-              !summary ? "text-slate-600 border-slate-800" : "text-white border-slate-900"
+              !summary
+                ? "text-slate-600 border-slate-800"
+                : "text-white border-slate-900"
             } `}
           >
             SUMMARY
