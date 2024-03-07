@@ -12,8 +12,8 @@ function MyProjects({ view }) {
       <p
         className={`xl:hidden font-medium font-inter z-10  ${
           view === "myProjects"
-            ? "sticky bg-slate-900 py-5 text-pink-500 xl:text-white -top-10 xl:relative"
-            : "relative my-5"
+          ? "sticky bg-slate-900 py-5 text-pink-500 xl:text-white -top-10 xl:relative z-10"
+          : "relative my-5"
         }`}
       >
         PROJECTS
