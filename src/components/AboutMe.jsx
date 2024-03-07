@@ -75,7 +75,7 @@ function AboutSummary() {
             {skills[0].lang.map((item) => (
               <li className="flex flex-col gap-1 items-center justify-center bg-white rounded py-2">
                 <img src={item.icon} className="size-8 object-contain" />
-                <p className="text-xs text-black p-1">{item.name}</p>
+                <p className="text-xs text-black font-semibold p-1">{item.name}</p>
               </li>
             ))}
           </ul>
@@ -83,7 +83,7 @@ function AboutSummary() {
             {skills[1].front.map((item) => (
               <li className="flex flex-col gap-1 items-center justify-center bg-white rounded py-2">
                 <img src={item.icon} className="size-8 object-contain" />
-                <p className="text-xs text-black p-1">{item.name}</p>
+                <p className="text-xs text-black font-bold p-1">{item.name}</p>
               </li>
             ))}
           </ul>
@@ -91,7 +91,7 @@ function AboutSummary() {
             {skills[2].back.map((item) => (
               <li className="flex flex-col gap-1 items-center justify-center bg-white rounded py-2">
                 <img src={item.icon} className="size-8 object-contain" />
-                <p className="text-xs text-black p-1">{item.name}</p>
+                <p className="text-xs text-black font-bold p-1">{item.name}</p>
               </li>
             ))}
           </ul>
@@ -99,7 +99,7 @@ function AboutSummary() {
             {skills[3].database.map((item) => (
               <li className="flex flex-col gap-1 items-center justify-center bg-white rounded py-2">
                 <img src={item.icon} className="size-8 object-contain" />
-                <p className="text-xs text-black p-1">{item.name}</p>
+                <p className="text-xs text-black font-bold p-1">{item.name}</p>
               </li>
             ))}
           </ul>
@@ -161,7 +161,7 @@ function AboutMe({ view }) {
   return (
     <div id="aboutMe" className={`section bg-yellow-40 line-clamp space-y-5`}>
       <div
-        className={`z-10 relative flex justify-between w-full ${
+        className={`z-20 relative flex justify-between w-full ${
           view === "aboutMe"
             ? "sticky bg-slate-900 xl:text-white -top-8 xl:top-0 xl:relative"
             : "relative text-white"

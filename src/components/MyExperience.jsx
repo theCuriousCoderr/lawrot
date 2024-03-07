@@ -31,7 +31,7 @@ function MyExperience({ view, expLen }) {
               <li
                 key={items.company + items.role}
                 id={id === experience.length - 1 ? "last" : "none"}
-                className="group space-y-2 xl:flex xl:items-start xl:space-y-0 bg-red-40 xl:hover:bg-teal-800 xl:hover:bg-opacity-10 xl:p-3 rounded-md"
+                className="group border-l-2 border-slate-400 bg-red-40 pl-4 space-y-2 xl:flex xl:items-start xl:space-y-0 bg-red-40 xl:hover:bg-teal-800 xl:hover:bg-opacity-10 xl:p-3 rounded-md"
               >
                 <div className="group-hover:text-white flex items-center gap-2 text-xs text-slate-500 xl:w-[35%] bg-red-40">
                   <p>{items.period.start}</p>
@@ -56,7 +56,7 @@ function MyExperience({ view, expLen }) {
                       </a>
                     )}
                   </div>
-                  <p className="text-slate-500 text-sm xl:group-hover:text-slate-300">
+                  <p className="text-slate-500 text-sm xl:group-hover:text-slate-300 text-pretty">
                     {items.desc}
                   </p>
                   <ul className="flex flex-wrap w-full gap-2 items-center">
