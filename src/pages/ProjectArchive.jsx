@@ -63,28 +63,27 @@ function ProjectArchive() {
                 <td className="text-slate-400 text-sm w-[10%]">
                   {items.period.start.slice(-4)}
                 </td>
-                <td
-                  className="flex w-[15%] text-slate-200 hover:text-teal-200 text-sm font-bold group transition-all"
-                >
+                <td className="flex w-[15%] text-slate-200 hover:text-teal-200 text-sm font-bold group transition-all">
                   <p>{items.company}</p>
-                 
                 </td>
-                <td className="text-slate-500 w-[20%] font-semibold">{items.role || 'Front End Developer'}</td>
+                <td className="text-slate-500 w-[20%] font-semibold">
+                  {items.role || "Front End Developer"}
+                </td>
                 <td className="flex flex-wrap gap-2 bg-red-40 py-5 px-5 w-[40%]">
-                {items.tools.map((skill) => (
-                      <span
-                        key={skill}
-                        className=" text-emerald-300 text-xs bg-emerald-600 bg-opacity-10 px-3 py-1 rounded-full"
-                      >
-                        {skill}
-                      </span>
-                    ))}
+                  {items.tools.map((skill) => (
+                    <span
+                      key={skill}
+                      className=" text-emerald-300 text-xs bg-emerald-600 bg-opacity-10 px-3 py-1 rounded-full"
+                    >
+                      {skill}
+                    </span>
+                  ))}
                 </td>
                 <td
                   onClick={() => window.open(items.link, "_blank")}
                   className="flex overflow-scroll no-scrollbar w-[15%] text-slate-200 hover:text-teal-200 text-sm font-bold group transition-all"
                 >
-                  <p className="">{items.link.replace('https://', '')}</p>
+                  <p className="">{items.link.replace("https://", "")}</p>
                   <div className="transition-all -rotate-45 group-hover:translate-x-1 group-hover:-translate-y-1">
                     <ArrowForward sx={{ fontSize: 15 }} />
                   </div>

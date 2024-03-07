@@ -12,8 +12,8 @@ function MyProjects({ view }) {
       <p
         className={`xl:hidden font-medium font-inter z-10  ${
           view === "myProjects"
-          ? "sticky bg-slate-900 py-5 text-pink-500 xl:text-white -top-10 xl:relative z-10"
-          : "relative my-5"
+            ? "sticky bg-slate-900 py-5 text-pink-500 xl:text-white -top-10 xl:relative z-10"
+            : "relative my-5"
         }`}
       >
         PROJECTS
@@ -22,7 +22,10 @@ function MyProjects({ view }) {
         {projects.slice(0, 5).map((items) => {
           return (
             <li className="text-center group space-y-2 xl:flex xl:space-y-0 xl:items-start xl:justify-between xl:hover:bg-teal-800 xl:hover:bg-opacity-10 xl:p-3 rounded-md">
-              <div onClick={() => window.open(items.link, '_blank')} className="bg-red-30 flex justify-center w-full gap-2 xl:w-[30%] xl:justify-start bg-red-40 ">
+              <div
+                onClick={() => window.open(items.link, "_blank")}
+                className="bg-red-30 flex justify-center w-full gap-2 xl:w-[30%] xl:justify-start bg-red-40 "
+              >
                 <div className="bg-red-40 w-48 xl:w-auto aspect-video xl:aspect-auto xl:justify-end hidden xl:flex">
                   <img
                     src={items.photo || items.role}
@@ -60,12 +63,10 @@ function MyProjects({ view }) {
                     <ArrowForward sx={{ fontSize: 20 }} />
                   </a>
                 </div>
-                
+
                 <p className="bg-clip-text text-transparent bg-gradient-to-r from-white from-20% to-teal-500 to-50% xl:group-hover:text-slate-300">
                   {items.desc}
                 </p>
-                
-               
               </div>
             </li>
           );
@@ -77,7 +78,9 @@ function MyProjects({ view }) {
           to="/project-archive"
           className="text -rotate-45 text-slate-300 hover:text-blue-600 p-2 bg-red-30"
         >
-          <span className="group-hover:mr-2 mr-1 group-hover:underline underline-offset-8 transition-all">View Full Project Archive</span>
+          <span className="group-hover:mr-2 mr-1 group-hover:underline underline-offset-8 transition-all">
+            View Full Project Archive
+          </span>
           <ArrowForward sx={{ fontSize: 20 }} />
         </NavLink>
       </div>
