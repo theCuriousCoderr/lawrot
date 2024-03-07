@@ -15,11 +15,11 @@ function ProjectArchive() {
           <span className="bg-red-30 flex items-center justify-center group-hover:-ml-2">
             <ArrowBack sx={{ fontSize: 20 }} />
           </span>{" "}
-          <span className="bg-red-20 group-hover:ml-2 text-base xl:text-lg">
+          <span className="bg-red-20 group-hover:ml-2 group-hover:text-slate-500 text-base xl:text-lg">
             Olalekan Oladimeji
           </span>
         </NavLink>
-        <h1 className="text-[8vw] xl:text-[3rem] font-black font-inter text-slate-300 xl:leading-10 leading-5">
+        <h1 className="text-[8vw] xl:text-[3rem] font-black font-inter text-slate-300 xl:leading-10 leading-8">
           All Projects
         </h1>
       </div>

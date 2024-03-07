@@ -177,7 +177,7 @@ function AboutMe({ view }) {
             onClick={() => setSummary(!summary)}
             className={`font-medium font-inter w-24 text-center p-3 border ${
               summary
-                ? "text-slate-600 border-slate-800"
+                ? "text-slate-600 border-slate-800 hover:text-slate-400"
                 : "text-white border-slate-900"
             } `}
           >
@@ -187,7 +187,7 @@ function AboutMe({ view }) {
             onClick={() => setSummary(!summary)}
             className={`w-24 text-center bg-red-80 border ${
               !summary
-                ? "text-slate-600 border-slate-800"
+                ? "text-slate-600 border-slate-800 hover:text-slate-400"
                 : "text-white border-slate-900"
             } `}
           >
