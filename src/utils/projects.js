@@ -59,7 +59,7 @@ const projectsData = [
       role: "Front End Developer",
       company: "Design Illustration",
       desc: "Developed an amimation based mobile bottom nav bar design illustration.",
-      tools: ["HTML", "CSS", "JavaScript", "Figma", "Animation"],
+      tools: ["React", "Figma", "Animation"],
       link: 'https://twitter.com/elijahdimeji549/status/1748013457276915999?s=19'
     },
     {
@@ -75,7 +75,7 @@ const projectsData = [
       photo: trail,
       company: "Light Trail",
       desc: "An animation based design illustration. ",
-      tools: ["HTML", "CSS", "JavaScript", "Animation"],
+      tools: ["React", "JSX", "CSS Animation"],
       link: 'https://light-trail.vercel.app'
     },
     {
@@ -91,7 +91,7 @@ const projectsData = [
       photo: talentsync,
       company: "Talent Sync",
       desc: "A responsive landing page.",
-      tools: ["HTML", "CSS", "JavaScript", "Figma", "Vercel"],
+      tools: ["React", "Figma", "Vercel"],
       link: 'https://talentsync-assessment-ebon.vercel.app'
     },
     {
@@ -99,7 +99,7 @@ const projectsData = [
       photo: geegpay,
       company: "Geegpay",
       desc: "A responsive Sales Analytics dashboard design.",
-      tools: ["HTML", "CSS", "JavaScript", "Figma", "Animation", "Responsiveness"],
+      tools: ["React", "React Charts", "Moment.js", "Figma", "CSS Animation", "Responsiveness"],
       link: 'https://geegpay-fe-dashboard-challenge.vercel.app'
     },
     {
@@ -107,7 +107,7 @@ const projectsData = [
       photo: bravex,
       company: "Bravex",
       desc: "An animation based project that has a self-propelling meteor-trail type animation.",
-      tools: ["HTML", "CSS", "Animation", "Github"],
+      tools: ["React", "CSS Animation", "Github"],
       link: 'https://bravex-demo.vercel.app'
     }
   ];
