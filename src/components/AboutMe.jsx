@@ -71,7 +71,7 @@ function AboutSummary() {
           years:{" "}
         </p>
         <div className="space-y-5">
-          <ul className="flex flex-wrap w-full gap-2 border-r-4 border-slate-400 pr-2">
+          <ul className="flex flex-wrap w-full gap-2 border-r-4 border-slate-200 pr-2">
             {skills[0].lang.map((item) => (
               <li className="flex flex-col gap-1 items-center justify-center bg-white rounded py-2">
                 <img src={item.icon} className="size-8 object-contain" />
@@ -79,7 +79,7 @@ function AboutSummary() {
               </li>
             ))}
           </ul>
-          <ul className="flex flex-wrap w-full gap-2 border-r-4 border-slate-400 pr-2">
+          <ul className="flex flex-wrap w-full gap-2 border-r-4 border-slate-200 pr-2">
             {skills[1].front.map((item) => (
               <li className="flex flex-col gap-1 items-center justify-center bg-white rounded py-2">
                 <img src={item.icon} className="size-8 object-contain" />
@@ -87,7 +87,7 @@ function AboutSummary() {
               </li>
             ))}
           </ul>
-          <ul className="flex flex-wrap w-full gap-2 border-r-4 border-slate-400 pr-2">
+          <ul className="flex flex-wrap w-full gap-2 border-r-4 border-slate-200 pr-2">
             {skills[2].back.map((item) => (
               <li className="flex flex-col gap-1 items-center justify-center bg-white rounded py-2">
                 <img src={item.icon} className="size-8 object-contain" />
@@ -95,7 +95,7 @@ function AboutSummary() {
               </li>
             ))}
           </ul>
-          <ul className="flex flex-wrap w-full gap-2 border-r-4 border-slate-400 pr-2">
+          <ul className="flex flex-wrap w-full gap-2 border-r-4 border-slate-200 pr-2">
             {skills[3].database.map((item) => (
               <li className="flex flex-col gap-1 items-center justify-center bg-white rounded py-2">
                 <img src={item.icon} className="size-8 object-contain" />
@@ -114,7 +114,7 @@ function AboutFull() {
     <div className="space-y-5">
       {" "}
       <p className="text-slate-500">
-        With <span className="text-slate-300">2 years</span> of hands-on
+        With <span className="text-slate-400">2 years</span> of hands-on
         experience and technical expertise in crafting robust and user-eccentric
         web applications. My journey in web development began with a fervent
         curiousity with how the web and internet works, which led me into the
