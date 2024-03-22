@@ -135,22 +135,22 @@ function AboutFull() {
         languages like Node.js and Python. Leveraging frameworks like Express.js
         and Flask, I have built scalable and efficient APIs, integrated with
         databases such as MongoDB and SQLite3 to manage data effectively.
-        Additionally, i prioritize security practices, implementing measures
+        Additionally, I prioritize security practices, implementing measures
         such as encryption, authentication and authorization to safeguard
         sensitive data and mitigate risks.
       </p>
       <p className="text-teal-500">
         My proficiency extends beyond traditional web development paradigms, as
-        i am conversant with version control system using Git/Github, deploying
+        I am conversant with version control system using Git/Github, deploying
         and maintaining applications, files on cloud platforms like Vercel,
-        Render, Netlify, Cloudinary
+        Render, Netlify, Cloudinary.
       </p>
       <p className="text-slate-500">
         What sets me apart is my commitment to continuous learning and
         adaptations to emerging technologies and industry best practices. I
-        thrive in dynaamic environments where collaboartion and innovation drive
+        thrive in dynaamic environments where collaboration and innovation drive
         success, leveraging agile methodologies to deliver high-quality
-        solutions that exceeds client expectations
+        solutions that exceeds client expectations.
       </p>
     </div>
   );
