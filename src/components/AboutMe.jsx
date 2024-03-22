@@ -67,7 +67,7 @@ function AboutSummary() {
       </p>
       <div className="space-y-5">
         <p className="font-inte">
-          Soft skills and hard skills I have gathered to learn and use over the
+          Listed below are the soft skills and hard skills I have gathered to learn and use over the
           years:{" "}
         </p>
         <div className="space-y-5">
