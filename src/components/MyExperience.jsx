@@ -114,7 +114,7 @@ function MyExperience({ view, expLen }) {
         <a
           href={CV}
           download="Olalekan Oladimeji Resume"
-          className=" w-full font-medium text-base text-emerald-200 bg-emerald-400 hover:bg-transparent bg-opacity-40 px-5 py-2 rounded-md flex items-center justify-center"
+          className=" w-full font-medium text-base text-emerald-200 bg-emerald-400 hover:bg-emerald-900 bg-opacity-40 px-5 py-2 rounded-md flex items-center justify-center"
         >
           <span className="">Download Resume</span>
         </a>
