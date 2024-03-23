@@ -1,29 +1,52 @@
 import React, { useEffect, useState } from "react";
 import experienceData from "../utils/experience";
-import { ArrowBack, ArrowForward } from "@mui/icons-material";
+import { ArrowBack, ArrowForward, FilterAlt } from "@mui/icons-material";
 import CV from "../../Olalekan_Oladimeji_Resume.jpg";
 
 function MyExperience({ view, expLen }) {
   const [experience, setExperience] = useState("");
+  const [filter, setFilter] = useState("none")
 
   useEffect(() => {
-    setExperience(experienceData.slice(0, expLen));
+    if (filter === "none") {
+      setExperience(experienceData.slice(0, expLen));
+    }
+    
   }, [expLen]);
+
+  const filterExperience = (e) => {
+    let filter = experienceData.filter(items => {
+      return (items.tools.filter( tools => {
+        if (tools.toLowerCase().includes(e.target.value.toLowerCase())) {
+          return tools
+        }
+      })[0] )
+    })
+   setExperience(filter)
+   setFilter(e.target.value)
+
+  }
 
   return (
     <div
       id="myExperience"
       className="section text-white bg-blue-40 w-full mt-28 xl:mt-40"
     >
-      <p
-        className={`xl:hidden font-medium font-inter  ${
+      <div
+        className={`xl:hidden font-medium font-inter flex gap-5 items-end ${
           view === "myExperience"
-            ? "sticky bg-slate-900 py-5 text-pink-500 xl:text-white -top-10 xl:relative z-10"
+            ? "sticky bg-slate-900 py-5 text-pink-500 xl:text-white -top-10 xl:relative z-20"
             : "relative my-5"
         }`}
       >
-        CAREER EXPERIENCE
-      </p>
+        <p>CAREER EXPERIENCE</p>
+        <div className="relative w-48 bg-red-30">
+          <div className="absolute text-slate-500 right-0">
+          <FilterAlt sx={{fontSize: 20}} />
+          </div> 
+          <input id="filter" onChange={filterExperience} autoComplete="off" className="w-full h-full bg-transparent border-b border-slate-500 outline-none text-slate-300 focus-within:border-orange-400 placeholder:text-slate-600 placeholder:font-light placeholder:text-sm" placeholder="Filter experence" />
+        </div>
+      </div>
       <ul className="space-y-10">
         {experience &&
           experience.map((items, id) => {
@@ -63,7 +86,7 @@ function MyExperience({ view, expLen }) {
                     {items.tools.map((skill) => (
                       <span
                         key={skill}
-                        className=" text-emerald-300 text-xs bg-emerald-600 bg-opacity-10 px-3 py-1 rounded-full"
+                        className={`${(skill.toLowerCase().includes(filter.toLowerCase()) && filter !== "") ? "bg-orange-500 bg-opacity-20 text-orange-500" : "bg-emerald-600 bg-opacity-10" } text-emerald-300 text-xs bg-emerald-600  px-3 py-1 rounded-full`}
                       >
                         {skill}
                       </span>

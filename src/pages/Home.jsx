@@ -12,7 +12,6 @@ function Home() {
   function getView(id) {
     let windowHeight = window.innerHeight
     let windowWidth = window.innerWidth
-    // alert(windowWidth)
    
     let sections = document.querySelectorAll(".section");
     let target = document.querySelector(`.${id}`);
