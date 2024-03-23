@@ -67,11 +67,11 @@ function AboutSummary() {
       </p>
       <div className="space-y-5">
         <p className="font-inte">
-          Soft skills and hard skills I have gathered to learn and use over the
+          Listed below are the soft skills and hard skills I have gathered to learn and use over the
           years:{" "}
         </p>
         <div className="space-y-5">
-          <ul className="flex flex-wrap w-full gap-2 border-r-4 border-slate-400 pr-2">
+          <ul className="flex flex-wrap w-full gap-2 border-r-4 border-slate-200 pr-2">
             {skills[0].lang.map((item) => (
               <li className="flex flex-col gap-1 items-center justify-center bg-white rounded py-2">
                 <img src={item.icon} className="size-8 object-contain" />
@@ -79,7 +79,7 @@ function AboutSummary() {
               </li>
             ))}
           </ul>
-          <ul className="flex flex-wrap w-full gap-2 border-r-4 border-slate-400 pr-2">
+          <ul className="flex flex-wrap w-full gap-2 border-r-4 border-slate-200 pr-2">
             {skills[1].front.map((item) => (
               <li className="flex flex-col gap-1 items-center justify-center bg-white rounded py-2">
                 <img src={item.icon} className="size-8 object-contain" />
@@ -87,7 +87,7 @@ function AboutSummary() {
               </li>
             ))}
           </ul>
-          <ul className="flex flex-wrap w-full gap-2 border-r-4 border-slate-400 pr-2">
+          <ul className="flex flex-wrap w-full gap-2 border-r-4 border-slate-200 pr-2">
             {skills[2].back.map((item) => (
               <li className="flex flex-col gap-1 items-center justify-center bg-white rounded py-2">
                 <img src={item.icon} className="size-8 object-contain" />
@@ -95,7 +95,7 @@ function AboutSummary() {
               </li>
             ))}
           </ul>
-          <ul className="flex flex-wrap w-full gap-2 border-r-4 border-slate-400 pr-2">
+          <ul className="flex flex-wrap w-full gap-2 border-r-4 border-slate-200 pr-2">
             {skills[3].database.map((item) => (
               <li className="flex flex-col gap-1 items-center justify-center bg-white rounded py-2">
                 <img src={item.icon} className="size-8 object-contain" />
@@ -114,7 +114,7 @@ function AboutFull() {
     <div className="space-y-5">
       {" "}
       <p className="text-slate-500">
-        With <span className="text-slate-300">2 years</span> of hands-on
+        With <span className="text-slate-400">2 years</span> of hands-on
         experience and technical expertise in crafting robust and user-eccentric
         web applications. My journey in web development began with a fervent
         curiousity with how the web and internet works, which led me into the
@@ -135,22 +135,22 @@ function AboutFull() {
         languages like Node.js and Python. Leveraging frameworks like Express.js
         and Flask, I have built scalable and efficient APIs, integrated with
         databases such as MongoDB and SQLite3 to manage data effectively.
-        Additionally, i prioritize security practices, implementing measures
+        Additionally, I prioritize security practices, implementing measures
         such as encryption, authentication and authorization to safeguard
         sensitive data and mitigate risks.
       </p>
       <p className="text-teal-500">
         My proficiency extends beyond traditional web development paradigms, as
-        i am conversant with version control system using Git/Github, deploying
+        I am conversant with version control system using Git/Github, deploying
         and maintaining applications, files on cloud platforms like Vercel,
-        Render, Netlify, Cloudinary
+        Render, Netlify, Cloudinary.
       </p>
       <p className="text-slate-500">
         What sets me apart is my commitment to continuous learning and
         adaptations to emerging technologies and industry best practices. I
-        thrive in dynaamic environments where collaboartion and innovation drive
+        thrive in dynaamic environments where collaboration and innovation drive
         success, leveraging agile methodologies to deliver high-quality
-        solutions that exceeds client expectations
+        solutions that exceeds client expectations.
       </p>
     </div>
   );
