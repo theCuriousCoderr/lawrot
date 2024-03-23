@@ -44,7 +44,7 @@ function Home() {
   }
 
   return (
-    <div onScroll={() => getView('root')} className="root h-screen overflow-scroll bg-slate-900 px-5 py-8 xl:py-0 xl:h-screen xl:flex ">
+    <div onScroll={() => getView('root')} className="selection:bg-orange-400 selection:bg-opacity-20 root h-screen overflow-scroll bg-slate-900 px-5 py-8 xl:py-0 xl:h-screen xl:flex ">
       <MyInfo goTo={goTo} view={view} />
       <div
       id="target"

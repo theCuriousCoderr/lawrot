@@ -5,27 +5,25 @@ import CV from "../../Olalekan_Oladimeji_Resume.jpg";
 
 function MyExperience({ view, expLen }) {
   const [experience, setExperience] = useState("");
-  const [filter, setFilter] = useState("none")
+  const [filter, setFilter] = useState("none");
 
   useEffect(() => {
     if (filter === "none") {
       setExperience(experienceData.slice(0, expLen));
     }
-    
   }, [expLen]);
 
   const filterExperience = (e) => {
-    let filter = experienceData.filter(items => {
-      return (items.tools.filter( tools => {
+    let filter = experienceData.filter((items) => {
+      return items.tools.filter((tools) => {
         if (tools.toLowerCase().includes(e.target.value.toLowerCase())) {
-          return tools
+          return tools;
         }
-      })[0] )
-    })
-   setExperience(filter)
-   setFilter(e.target.value)
-
-  }
+      })[0];
+    });
+    setExperience(filter);
+    setFilter(e.target.value);
+  };
 
   return (
     <div
@@ -40,11 +38,18 @@ function MyExperience({ view, expLen }) {
         }`}
       >
         <p>CAREER EXPERIENCE</p>
-        <div className="relative w-48 bg-red-30">
-          <div className="absolute text-slate-500 right-0">
-          <FilterAlt sx={{fontSize: 20}} />
-          </div> 
-          <input id="filter" onChange={filterExperience} autoComplete="off" className="w-full h-full bg-transparent border-b border-slate-500 outline-none text-slate-300 focus-within:border-orange-400 placeholder:text-slate-600 placeholder:font-light placeholder:text-sm" placeholder="Filter experence" />
+        <div className="relative w-48 bg-red-30 bg-clip-text bg-gradient-to-r from-orange-500 to-[20%] to-pink-500">
+          <div className="absolute text-slate-500 right-0 bottom-1">
+            <FilterAlt sx={{ fontSize: 20 }} />
+          </div>
+          <input
+            id="filter"
+            onChange={filterExperience}
+            autoComplete="off"
+            spellCheck={false}
+            className="w-full caret-slate-400 h-full py-1 bg-transparent text-transparent border-b border-slate-500 outline-none text-slate-300 focus-within:border-orange-400 placeholder:text-slate-600 placeholder:font-light placeholder:text-sm"
+            placeholder="Filter experence"
+          />
         </div>
       </div>
       <ul className="space-y-10">
@@ -54,7 +59,7 @@ function MyExperience({ view, expLen }) {
               <li
                 key={items.company + items.role}
                 id={id === experience.length - 1 ? "last" : "none"}
-                className="group border-l-2 border-slate-400 bg-red-40 pl-4 space-y-2 xl:flex xl:items-start xl:space-y-0 bg-red-40 xl:hover:bg-teal-800 xl:hover:bg-opacity-10 xl:p-3 rounded-md"
+                className="group border-slate-400 bg-red-40 space-y-2 xl:flex xl:items-start xl:space-y-0 bg-red-40 xl:hover:bg-teal-800 xl:hover:bg-opacity-10 xl:p-3 rounded-md"
               >
                 <div className="group-hover:text-white flex items-center gap-2 text-xs text-slate-500 xl:w-[35%] bg-red-40">
                   <p>{items.period.start}</p>
@@ -86,7 +91,12 @@ function MyExperience({ view, expLen }) {
                     {items.tools.map((skill) => (
                       <span
                         key={skill}
-                        className={`${(skill.toLowerCase().includes(filter.toLowerCase()) && filter !== "") ? "bg-orange-500 bg-opacity-20 text-orange-500" : "bg-emerald-600 bg-opacity-10" } text-emerald-300 text-xs bg-emerald-600  px-3 py-1 rounded-full`}
+                        className={`${
+                          skill.toLowerCase().includes(filter.toLowerCase()) &&
+                          filter !== ""
+                            ? "bg-orange-500 bg-opacity-20 text-orange-500"
+                            : "bg-emerald-600 bg-opacity-10"
+                        } text-emerald-300 text-xs bg-emerald-600  px-3 py-1 rounded-full`}
                       >
                         {skill}
                       </span>
@@ -98,13 +108,13 @@ function MyExperience({ view, expLen }) {
           })}
       </ul>
 
-      <div className="my-5">
+      <div className="my-10">
         <a
           href={CV}
           download="Olalekan Oladimeji Resume"
-          className="font-bold text-base text-emerald-100 bg-emerald-400 bg-opacity-70 px-5 py-2 rounded-md"
+          className=" w-full font-medium text-base text-emerald-200 bg-emerald-400 bg-opacity-40 px-5 py-2 rounded-md flex items-center justify-center"
         >
-          <span>Download Resume</span>
+          <span className="">Download Resume</span>
         </a>
       </div>
     </div>
