@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import experienceData from "../utils/experience";
 import { ArrowBack, ArrowForward, FilterAlt } from "@mui/icons-material";
-import CV from "../../Olalekan_Oladimeji_Resume.png";
+import CV from "../../Olalekan_Oladimeji_Resume.pdf";
 
 
 
@@ -113,7 +113,8 @@ function MyExperience({ view, expLen }) {
       <div className="my-10">
         <a
           href={CV}
-          download="Olalekan Oladimeji Resume"
+          // download="Olalekan Oladimeji Resume"
+          target="_blank"
           className=" w-full font-medium text-base text-emerald-200 bg-emerald-400 hover:bg-emerald-900 bg-opacity-40 px-5 py-2 rounded-md flex items-center justify-center"
         >
           <span className="">Download Resume</span>
