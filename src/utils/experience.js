@@ -41,6 +41,14 @@ const experienceData = [
       link: 'https://ui-cgpa-calc.onrender.com'
     },
     {
+      period: { start: "MAY 2023", end: "MAY 2023" },
+      role: "Front End Developer",
+      company: "Getlinked.Ai",
+      desc: "Developed a landing page after a Figma design as an entry project for an hackathon",
+      tools: ["React", "Tailwond CSS", "Figma", "Github", "Vercel"],
+      link: 'https://getlinkedai-prehackathon-flax.vercel.app'
+    },
+    {
       period: { start: "NOV 2023", end: "NOV 2023" },
       role: "Full Stack Developer",
       company: "Stutern",

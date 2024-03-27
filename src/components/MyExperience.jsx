@@ -113,7 +113,7 @@ function MyExperience({ view, expLen }) {
       <div className="my-10">
         <a
           href={CV}
-          // download="Olalekan Oladimeji Resume"
+          download
           target="_blank"
           className=" w-full font-medium text-base text-emerald-200 bg-emerald-400 hover:bg-emerald-900 bg-opacity-40 px-5 py-2 rounded-md flex items-center justify-center"
         >
