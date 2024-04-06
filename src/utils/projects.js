@@ -117,6 +117,14 @@ const projectsData = [
       desc: "An animation based project that has a self-propelling meteor-trail type animation.",
       tools: ["React", "CSS Animation", "Github"],
       link: 'https://bravex-demo.vercel.app'
+    },
+    {
+      period: { start: "MAR 2024", end: "APR 2024" },
+      role: "Front End Developer",
+      company: "AirBNB Clone",
+      desc: "Designed, developed and deployed a personal project aimed to replicate the intuitive and user-friendly interface of the popular vacation rental platform, Airbnb. ",
+      tools: ["Angular", "Tailwind CSS", "Swiper.js", "Google Icons", "Vercel"],
+      link: 'https://airbnb-clone-lemon-three.vercel.app/home'
     }
   ];
 
