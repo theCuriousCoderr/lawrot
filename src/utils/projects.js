@@ -3,6 +3,7 @@ import geegpay from '../images/geegpay.png'
 import talentsync from '../images/talentsync.png'
 import toggle from '../images/toggle.png'
 import trail from '../images/trail.png'
+import airbnb from '../images/airbnb.png'
 
 const projectsData = [
     {
@@ -120,9 +121,10 @@ const projectsData = [
     },
     {
       period: { start: "MAR 2024", end: "APR 2024" },
+      photo: airbnb,
       role: "Front End Developer",
       company: "AirBNB Clone",
-      desc: "Designed, developed and deployed a personal project aimed to replicate the intuitive and user-friendly interface of the popular vacation rental platform, Airbnb. ",
+      desc: "A replication of the intuitive and user-friendly interface of the popular vacation rental platform, Airbnb. ",
       tools: ["Angular", "Tailwind CSS", "Swiper.js", "Google Icons", "Vercel"],
       link: 'https://airbnb-clone-lemon-three.vercel.app/home'
     }
