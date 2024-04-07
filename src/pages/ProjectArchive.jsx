@@ -54,8 +54,8 @@ function ProjectArchive() {
             <th className="w-[10%] py-5">Year</th>
             <th className="w-[15%]">Project</th>
             <th className="w-[20%] bg-red-30">Role</th>
-            <th className="w-[40%]">Built with</th>
-            <th className="w-[15%]">Link</th>
+            <th className="w-[35%]">Built with</th>
+            <th className="w-[20%]">Link</th>
           </tr>
           {projects.map((items) => {
             return (
@@ -69,7 +69,7 @@ function ProjectArchive() {
                 <td className="text-slate-500 w-[20%] font-semibold">
                   {items.role || "Front End Developer"}
                 </td>
-                <td className="flex flex-wrap gap-2 bg-red-40 py-5 px-5 w-[40%]">
+                <td className="flex flex-wrap gap-2 bg-red-40 py-5 pr-5 p w-[35%]">
                   {items.tools.map((skill) => (
                     <span
                       key={skill}
@@ -81,10 +81,10 @@ function ProjectArchive() {
                 </td>
                 <td
                   onClick={() => window.open(items.link, "_blank")}
-                  className="flex overflow-scroll no-scrollbar w-[15%] text-slate-200 hover:text-teal-200 text-sm font-bold group transition-all"
+                  className="flex overflow-scrol no-scrollbar w-[20%] text-slate-200 hover:text-teal-200 text-sm font-bold group transition-all"
                 >
-                  <p className="">{items.link.replace("https://", "")}</p>
-                  <div className="transition-all -rotate-45 group-hover:translate-x-1 group-hover:-translate-y-1">
+                  <p className="w-[90%] line-clamp-1">{items.link.replace("https://", "")}</p>
+                  <div className="w-[10%] transition-all -rotate-45 group-hover:translate-x-1 group-hover:-translate-y-1">
                     <ArrowForward sx={{ fontSize: 15 }} />
                   </div>
                 </td>
