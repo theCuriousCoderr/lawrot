@@ -20,7 +20,7 @@ function ProjectArchive() {
           </span>
         </NavLink>
         <h1 className="text-[8vw] xl:text-[3rem] font-black font-inter text-slate-300 xl:leading-10 leading-8">
-          All Projects
+          All Projects ({projects.length})
         </h1>
       </div>
       <div className="mt-16">

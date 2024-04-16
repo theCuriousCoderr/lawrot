@@ -8,6 +8,7 @@ import experienceData from "../utils/experience";
 function Home() {
   const [view, setView] = useState("aboutMe");
   const [expLen, setExpLen] = useState(3)
+  const [shrink, setShrink] = useState(0)
 
   function getView(id) {
     let windowHeight = window.innerHeight
@@ -23,6 +24,10 @@ function Home() {
       }
       if ((point >= elRect.top) && (point <= elRect.bottom)) {
         setView(section.id);
+      }
+      // alert((Math.round(elRect.top % 100)))
+      if (Math.round(elRect.top % 100) < 0 ) {
+        setShrink(Math.round(elRect.top % 100))
       }
     });
 
@@ -64,7 +69,7 @@ function Home() {
         onScroll={() => getView('target')}
         className="target xl:w-1/2 xl:h-screen xl:overflow-scroll xl:px-10 xl:pt-20 no-scrollbar"
       >
-        <AboutMe view={view} />
+        <AboutMe view={view} shrink={shrink} />
         <MyExperience view={view} expLen={expLen} />
         <MyProjects view={view} />
       </div>

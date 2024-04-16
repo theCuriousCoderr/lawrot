@@ -61,7 +61,7 @@ function AboutSummary() {
   return (
     <div className="text-slate-500 space-y-5">
       <p className="text-slate-500 font-[Inter">
-        I am a developer with {new Date().getFullYear() - 2021} years of hands-on experience and technical
+        I am a developer with {new Date().getFullYear() - 2021} years  of hands-on experience and technical
         expertise in developing responsive, optimised and scalable web
         applications on both the Frontend and Backend.
       </p>
@@ -114,7 +114,7 @@ function AboutFull() {
     <div className="space-y-5">
       {" "}
       <p className="text-slate-500">
-        With <span className="text-slate-400">2 years</span> of hands-on
+        With <span className="text-slate-400"> {new Date().getFullYear() - 2021} years</span> of hands-on
         experience and technical expertise in crafting robust and user-eccentric
         web applications. My journey in web development began with a fervent
         curiousity with how the web and internet works, which led me into the
