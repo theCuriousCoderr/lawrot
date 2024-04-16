@@ -61,7 +61,7 @@ function AboutSummary() {
   return (
     <div className="text-slate-500 space-y-5">
       <p className="text-slate-500 font-[Inter">
-        I am a developer with 2 years of hands-on experience and technical
+        I am a developer with {new Date().getFullYear() - 2021} years of hands-on experience and technical
         expertise in developing responsive, optimised and scalable web
         applications on both the Frontend and Backend.
       </p>
