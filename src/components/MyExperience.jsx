@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import experienceData from "../utils/experience";
 import { ArrowBack, ArrowForward, FilterAlt } from "@mui/icons-material";
-import CV from "../../Olalekan_Oladimeji_Resume.pdf";
+import CV from "../../Ola_CV.pdf";
 
 
 
