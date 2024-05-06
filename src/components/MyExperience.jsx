@@ -71,7 +71,7 @@ function MyExperience({ view, expLen }) {
                 <div className="space-y-2 xl:w-2/3 xl:space-y-3 bg-red-30">
                   <div
                     onClick={() => window.open(items.link, "_blank")}
-                    className="group-hover:text-teal-200 text-slate-300 flex items-center gap-2"
+                    className="group-hover:text-teal-200 cursor-pointer text-slate-300 flex items-center gap-2"
                   >
                     <p>{items.role}</p>
                     <div className="w-[1px] h-4 bg-slate-200"></div>

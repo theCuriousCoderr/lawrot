@@ -1,7 +1,11 @@
 import { Email, GitHub, LinkedIn, X } from "@mui/icons-material";
-import React from "react";
+import React, { useState } from "react";
+import SendMail from "./SendMail";
+import { NavLink } from "react-router-dom";
 
 function MyInfo({ view, goTo }) {
+
+  const [openEmail, setOpenEmail] = useState(false)
   const socialLinks = [
     { link: "https://github.com/Lambdola", icon: <GitHub /> },
     {
@@ -9,7 +13,7 @@ function MyInfo({ view, goTo }) {
       icon: <LinkedIn />,
     },
     { link: "https://x.com/elijahdimeji549?s=09", icon: <X /> },
-    { link: "", icon: <Email /> },
+    { link: "email", icon: <Email /> },
   ];
 
   return (
@@ -33,7 +37,11 @@ function MyInfo({ view, goTo }) {
             { section: "myProjects", text: "PROJECTS" },
           ].map((items) => {
             return (
-              <li key={items.text} onClick={() => goTo(items.section)} className="group flex items-center gap-2">
+              <li
+                key={items.text}
+                onClick={() => goTo(items.section)}
+                className="group flex items-center gap-2"
+              >
                 <div
                   className={`group-hover:w-16 group-hover:bg-white ${
                     view === items.section
@@ -60,14 +68,27 @@ function MyInfo({ view, goTo }) {
         <ul className="flex gap-3 xl:gap-5 items-center mt-5">
           {socialLinks.map((items) => (
             <li key={items.link} className="cursor-pointer">
-              <a target="_blank" href={items.link}>
-                <div className="text-slate-400 bg hover:text-pink-500 ">
-                  {items.icon}{" "}
-                </div>{" "}
-              </a>
+              {items.link !== "email" ? (
+                <NavLink target="_blank" href={items.link}>
+                  <div className="text-slate-400 bg hover:text-pink-500 ">
+                    {items.icon}{" "}
+                  </div>{" "}
+                </NavLink>
+              ) : (
+                // Mail Icon Button
+                <button onClick={() => setOpenEmail(!openEmail)}>
+                  <div className={` hover:text-pink-500 ${openEmail ? "text-pink-500" : "text-slate-400"} `}>
+                    {items.icon}
+                  </div>
+                </button>
+              )}
             </li>
           ))}
         </ul>
+      </div>
+
+      <div>
+        {openEmail && <SendMail />}
       </div>
     </header>
   );

@@ -173,7 +173,7 @@ function AboutMe({ view }) {
               summary ? "right-0" : "left-0"
             }  -z-10`}
           ></div>
-          <p
+          <button
             onClick={() => setSummary(!summary)}
             className={`font-medium font-inter w-24 text-center p-3 border ${
               summary
@@ -182,7 +182,7 @@ function AboutMe({ view }) {
             } `}
           >
             ABOUT
-          </p>
+          </button>
           <button
             onClick={() => setSummary(!summary)}
             className={`w-24 text-center bg-red-80 border ${
