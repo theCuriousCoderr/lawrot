@@ -22,6 +22,7 @@ function MyProjects({ view }) {
         {projects.slice(0, 5).map((items) => {
           return (
             <li key={items.company} className="group text-center group space-y-2 xl:flex xl:space-y-0 xl:items-start xl:justify-between xl:hover:bg-teal-800 xl:hover:bg-opacity-10 xl:p-3 rounded-md">
+              {/* mobile view */}
               <div
                 onClick={() => window.open(items.link, "_blank")}
                 className="bg-red-30 flex justify-center w-full gap-2 xl:w-[30%] xl:justify-start bg-red-40 "
@@ -47,7 +48,7 @@ function MyProjects({ view }) {
                 <div className="group-hover:rounded-md overflow-hidden w-full flex items-center justify-center xl:hidden">
                   <img
                     src={items.photo || items.role}
-                    className="hover:scale-110 transition-all w-2/3 aspect-video object-cover"
+                    className="hover:scale-110 transition-all w-2/3 aspect-video object-cover hover:object-contain"
                   />
                 </div>
                 <div

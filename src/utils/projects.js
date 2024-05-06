@@ -4,6 +4,7 @@ import talentsync from '../images/talentsync.png'
 import toggle from '../images/toggle.png'
 import trail from '../images/trail.png'
 import airbnb from '../images/airbnb.png'
+import gleja from '../images/gleja.png'
 
 const projectsData = [
     {
@@ -118,6 +119,15 @@ const projectsData = [
       desc: "An animation based project that has a self-propelling meteor-trail type animation.",
       tools: ["React", "CSS Animation", "Github"],
       link: 'https://bravex-demo.vercel.app'
+    },
+    {
+      period: { start: "APR 2024", end: "APR 2024" },
+      photo: gleja,
+      role: "Front End Developer",
+      company: "G-Leja",
+      desc: "Developed a Full Section Landing page, with sign up and log in pages added to it by taking design inspirations from the online designs",
+      tools: ["React", "Tailwind CSS", "Animation", "Vercel"],
+      link: 'https://g-leja.vercel.app/'
     },
     {
       period: { start: "MAR 2024", end: "APR 2024" },

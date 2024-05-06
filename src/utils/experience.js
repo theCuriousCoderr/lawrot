@@ -113,6 +113,14 @@ const experienceData = [
       link: 'https://bravex-demo.vercel.app'
     },
     {
+      period: { start: "APR 2024", end: "APR 2024" },
+      role: "Front End Developer",
+      company: "G-Leja",
+      desc: "Developed a Full Section Landing page, with sign up and log in pages added to it, by taking design inspirations from the online designs",
+      tools: ["React", "Tailwind CSS", "Animation", "Vercel"],
+      link: 'https://g-leja.vercel.app/'
+    },
+    {
       period: { start: "MAR 2024", end: "APR 2024" },
       role: "Front End Developer",
       company: "AirBNB Clone",
