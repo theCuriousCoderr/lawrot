@@ -75,12 +75,17 @@ function MyInfo({ view, goTo }) {
                   </div>{" "}
                 </NavLink>
               ) : (
+                <a href="mailto:elijahdimeji549@gmail.com">
+                   <div className="text-slate-400 bg hover:text-pink-500 ">
+                    {items.icon}{" "}
+                  </div>{" "}
+                </a>
                 // Mail Icon Button
-                <button onClick={() => setOpenEmail(!openEmail)}>
-                  <div className={` hover:text-pink-500 ${openEmail ? "text-pink-500" : "text-slate-400"} `}>
-                    {items.icon}
-                  </div>
-                </button>
+                // <button onClick={() => setOpenEmail(!openEmail)}>
+                //   <div className={` hover:text-pink-500 ${openEmail ? "text-pink-500" : "text-slate-400"} `}>
+                //     {items.icon}
+                //   </div>
+                // </button>
               )}
             </li>
           ))}

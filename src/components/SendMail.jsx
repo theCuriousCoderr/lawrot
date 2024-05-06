@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import nodemailer from 'nodemailer'
 import {Resend } from 'resend'
 
 function SendMail() {
@@ -18,29 +17,29 @@ function SendMail() {
     alert(JSON.stringify(mailInfo))
 
 
-    let transporter = new nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: "elijahdimeji549@gmail.com",
-            pass: "bkcd hmcn giph zkxk"
-        }
-    });
+    // let transporter = new nodemailer.createTransport({
+    //     service: 'gmail',
+    //     auth: {
+    //         user: "elijahdimeji549@gmail.com",
+    //         pass: "bkcd hmcn giph zkxk"
+    //     }
+    // });
 
-    let mailOptions = {
-        from:  "elijahdimeji549@gmail.com",
-        to: "segunsunday619@gmail.com",
+    // let mailOptions = {
+    //     from:  "elijahdimeji549@gmail.com",
+    //     to: "segunsunday619@gmail.com",
         
-        subject: "Testing",
-        html: `<h1>NodeMailer is Working.</h1>`
-    }
+    //     subject: "Testing",
+    //     html: `<h1>NodeMailer is Working.</h1>`
+    // }
 
-    transporter.sendMail(mailOptions, (error, info)=> {
-        if (error) {
-            alert("ERROR")
-        } else {
-            alert("SUCCESS")
-        }
-    })
+    // transporter.sendMail(mailOptions, (error, info)=> {
+    //     if (error) {
+    //         alert("ERROR")
+    //     } else {
+    //         alert("SUCCESS")
+    //     }
+    // })
 
 
 
