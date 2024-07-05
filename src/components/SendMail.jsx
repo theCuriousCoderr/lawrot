@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import {Resend } from 'resend'
 
 function SendMail() {
   const [mailInfo, setMailInfo] = useState({
@@ -12,38 +11,8 @@ function SendMail() {
   }
 
   async function handleMailFormSubmit(e) {
-   
-    e.preventDefault()
-    alert(JSON.stringify(mailInfo))
-
-
-    // let transporter = new nodemailer.createTransport({
-    //     service: 'gmail',
-    //     auth: {
-    //         user: "elijahdimeji549@gmail.com",
-    //         pass: "bkcd hmcn giph zkxk"
-    //     }
-    // });
-
-    // let mailOptions = {
-    //     from:  "elijahdimeji549@gmail.com",
-    //     to: "segunsunday619@gmail.com",
-        
-    //     subject: "Testing",
-    //     html: `<h1>NodeMailer is Working.</h1>`
-    // }
-
-    // transporter.sendMail(mailOptions, (error, info)=> {
-    //     if (error) {
-    //         alert("ERROR")
-    //     } else {
-    //         alert("SUCCESS")
-    //     }
-    // })
-
-
-
-   
+    e.preventDefault();
+    alert(JSON.stringify(mailInfo));
   }
 
   return (
@@ -82,7 +51,10 @@ function SendMail() {
           </div>
         </div>
         <div className="mt-1">
-          <button disabled={mailInfo.email === "" || mailInfo.message === ""} className="bg-pink-600 disabled:bg-slate-800 disabled:text-slate-500 text-white py-2 px-3 text-sm rounded-md">
+          <button
+            disabled={mailInfo.email === "" || mailInfo.message === ""}
+            className="bg-pink-600 disabled:bg-slate-800 disabled:text-slate-500 text-white py-2 px-3 text-sm rounded-md"
+          >
             Send Mail
           </button>
         </div>

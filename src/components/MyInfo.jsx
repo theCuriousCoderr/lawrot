@@ -2,10 +2,10 @@ import { Email, GitHub, LinkedIn, X } from "@mui/icons-material";
 import React, { useState } from "react";
 import SendMail from "./SendMail";
 import { NavLink } from "react-router-dom";
+import CV from "../../Ola_CV.pdf";
 
 function MyInfo({ view, goTo }) {
-
-  const [openEmail, setOpenEmail] = useState(false)
+  const [openEmail, setOpenEmail] = useState(false);
   const socialLinks = [
     { link: "https://github.com/Lambdola", icon: <GitHub /> },
     {
@@ -29,39 +29,56 @@ function MyInfo({ view, goTo }) {
         applications.
       </p>
 
-      <div className="text-slate-500 hidden xl:block w-1/3 text-sm">
-        <ul className="space-y-5 my-20">
+      <div className="text-slate-500 hidden xl:block xl:w-auto w-1/3 text-sm bg-red-40">
+        <ul className="space-y-5 my-20 xl:mb-5">
           {[
-            { section: "aboutMe", text: "ABOUT" },
-            { section: "myExperience", text: "EXPERIENCE" },
-            { section: "myProjects", text: "PROJECTS" },
+            { section: "aboutMe", text: "ABOUT ME" },
+            {
+              section: "workingExperience",
+              text: "MY PROFESSIONAL EXPERIENCE",
+            },
+            { section: "myExperience", text: "MY PROJECT EXPERIENCE" },
+            { section: "myProjects", text: "MY PROJECTS" },
           ].map((items) => {
             return (
               <li
                 key={items.text}
                 onClick={() => goTo(items.section)}
-                className="group flex items-center gap-2"
+                className="w-full"
               >
-                <div
-                  className={`group-hover:w-16 group-hover:bg-white ${
-                    view === items.section
-                      ? "w-16 bg-white"
-                      : "w-5 bg-slate-500"
-                  } h-[.2px] transition-all`}
-                ></div>
-                <p
-                  className={`group-hover:font-semibold group-hover:text-slate-300 ${
-                    view === items.section
-                      ? "font-semibold text-slate-300"
-                      : "font-normal text-slate-500"
-                  } transition-all`}
-                >
-                  {items.text}
-                </p>
+                <button className="w-ful group flex items-center gap-2 cursor-pointer">
+                  <div
+                    className={`group-hover:w-16 group-hover:bg-white ${
+                      view === items.section
+                        ? "w-16 bg-white"
+                        : "w-5 bg-slate-500"
+                    } h-[.2px] transition-all`}
+                  ></div>
+                  <p
+                    className={`group-hover:font-semibold group-hover:text-slate-300 ${
+                      view === items.section
+                        ? "font-semibold text-slate-300"
+                        : "font-normal text-slate-500"
+                    } transition-all`}
+                  >
+                    {items.text}
+                  </p>
+                </button>
               </li>
             );
           })}
         </ul>
+      </div>
+
+      <div className="">
+        <a
+          href={CV}
+          download
+          target="_blank"
+          className="w-2/3 font-medium text-base text-emerald-400 xl:text-emerald-200 xl:bg-emerald-600  hover:bg-emerald-900 px-5 py-2 rounded-md flex items-center justify-center"
+        >
+          <span className="">Download Resume</span>
+        </a>
       </div>
 
       <div>
@@ -76,7 +93,7 @@ function MyInfo({ view, goTo }) {
                 </NavLink>
               ) : (
                 <a href="mailto:elijahdimeji549@gmail.com">
-                   <div className="text-slate-400 bg hover:text-pink-500 ">
+                  <div className="text-slate-400 bg hover:text-pink-500 ">
                     {items.icon}{" "}
                   </div>{" "}
                 </a>
@@ -92,9 +109,7 @@ function MyInfo({ view, goTo }) {
         </ul>
       </div>
 
-      <div>
-        {openEmail && <SendMail />}
-      </div>
+      <div>{openEmail && <SendMail />}</div>
     </header>
   );
 }

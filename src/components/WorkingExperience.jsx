@@ -2,15 +2,16 @@ import React, { useEffect, useState } from "react";
 import experienceData from "../utils/experience";
 import { ArrowBack, ArrowForward, FilterAlt } from "@mui/icons-material";
 import CV from "../../Ola_CV.pdf";
+import workingExperienceData from "../utils/workingExperience";
 import { Link } from "react-router-dom";
 
-function MyExperience({ view, expLen }) {
+function WorkingExperience({ view, expLen }) {
   const [experience, setExperience] = useState("");
   const [filter, setFilter] = useState("none");
 
   useEffect(() => {
     if (filter === "none") {
-      setExperience(experienceData.slice(0, expLen));
+      setExperience(workingExperienceData.slice(0, expLen));
     }
   }, [expLen]);
 
@@ -28,20 +29,20 @@ function MyExperience({ view, expLen }) {
 
   return (
     <div
-      id="myExperience"
+      id="workingExperience"
       className="section text-white bg-blue-40 w-full mt-28 xl:mt-40"
     >
       <h2 className="hidden xl:block my-5 text-xl text-teal-400 font-bold">
-        MY PROJECT&apos; EXPERIENCE
+        MY PROFESSIONAL EXPERIENCE
       </h2>
       <div
         className={`xl:hidden font-medium font-inter flex gap-5 items-end ${
-          view === "myExperience"
+          view === "workingExperience"
             ? "sticky bg-slate-900 py-5 text-pink-500 xl:text-white -top-10 xl:relative z-20"
             : "relative my-5"
         }`}
       >
-        <p>PROJECTS&apos;S EXPERIENCE</p>
+        <p className="text-teal-400">MY PROFESSIONAL EXPERIENCE</p>
         <div className="relative w-48 bg-red-30 bg-clip-text bg-gradient-to-r from-orange-500 to-[20%] to-pink-500">
           <div className="absolute text-slate-500 right-0 bottom-1">
             <FilterAlt sx={{ fontSize: 20 }} />
@@ -57,10 +58,11 @@ function MyExperience({ view, expLen }) {
         </div>
       </div>
       <ul className="space-y-10">
-        {experience &&
-          experience.map((items, id) => {
+        {workingExperienceData &&
+          workingExperienceData.map((items, id) => {
             return (
               <li
+                role="button"
                 key={items.company + items.role}
                 id={id === experience.length - 1 ? "last" : "none"}
                 className="w-full"
@@ -75,23 +77,32 @@ function MyExperience({ view, expLen }) {
                     <hr className="w-3 text-slate-500" />
                     <p>{items.period.end}</p>
                   </div>
-                  <div className="space-y-2 xl:w-2/3 xl:space-y-3 bg-red-30">
+                  <div className="text-left space-y-2 xl:w-2/3 xl:space-y-3 bg-red-30">
                     <div
                       onClick={() => window.open(items.link, "_blank")}
                       className="group-hover:text-teal-200 cursor-pointer text-slate-300 flex items-center gap-2"
                     >
-                      <p>{items.role}</p>
-                      <div className="w-[1px] h-4 bg-slate-200"></div>
-                      <p>{items.company}</p>
-                      {items.link && (
-                        <div className="text-sm -rotate- hover:text-blue-600">
-                          <ArrowForward sx={{ fontSize: 20 }} />
-                        </div>
-                      )}
+                      <div>
+                        <p className="text-slate-400">{items.role}</p>
+                        <p className="text-slate-50">{items.company}</p>
+                      </div>
+                      <div>
+                        {items.link && (
+                          <a
+                            href={items.link}
+                            target="_blank"
+                            className="text-sm -rotate-45 hover:text-blue-600"
+                          >
+                            <ArrowForward sx={{ fontSize: 20 }} />
+                          </a>
+                        )}
+                      </div>
                     </div>
-                    <p className="text-slate-500 text-sm xl:group-hover:text-slate-300 text-pretty">
-                      {items.desc}
-                    </p>
+                    <ul className="text-slate-500 text-sm xl:group-hover:text-slate-300 text-pretty list-decimal list-inside space-y-2 marker:text-teal-400">
+                      {items.desc.map((deeds) => (
+                        <li key={deeds}>{deeds}</li>
+                      ))}
+                    </ul>
                     <ul className="flex flex-wrap w-full gap-2 items-center">
                       {items.tools.map((skill) => (
                         <span
@@ -114,19 +125,8 @@ function MyExperience({ view, expLen }) {
             );
           })}
       </ul>
-
-      <div className="my-10 xl:hidden">
-        <a
-          href={CV}
-          download
-          target="_blank"
-          className=" w-full font-medium text-base text-emerald-200 bg-emerald-400 hover:bg-emerald-900 bg-opacity-40 px-5 py-2 rounded-md flex items-center justify-center"
-        >
-          <span className="">Download Resume</span>
-        </a>
-      </div>
     </div>
   );
 }
 
-export default MyExperience;
+export default WorkingExperience;

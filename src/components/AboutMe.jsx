@@ -61,27 +61,36 @@ function AboutSummary() {
   return (
     <div className="text-slate-500 space-y-5">
       <p className="text-slate-500 font-[Inter">
-        I am a developer with {new Date().getFullYear() - 2021} years  of hands-on experience and technical
-        expertise in developing responsive, optimised and scalable web
-        applications on both the Frontend and Backend.
+        I am a developer with {new Date().getFullYear() - 2021} years of
+        hands-on experience and technical expertise in developing responsive,
+        optimised and scalable web applications on both the Frontend and
+        Backend.
       </p>
       <div className="space-y-5">
         <p className="font-inte">
-          Listed below are the soft skills and hard skills I have gathered to learn and use over the
-          years:{" "}
+          Listed below are the soft skills and hard skills I have gathered to
+          learn and use over the years:{" "}
         </p>
         <div className="space-y-5">
           <ul className="flex flex-wrap w-full gap-2 border-r-4 border-slate-700 pr-2">
             {skills[0].lang.map((item) => (
-              <li key={item.name}  className="flex flex-col gap-1 items-center justify-center bg-white rounded py-2">
+              <li
+                key={item.name}
+                className="flex flex-col gap-1 items-center justify-center bg-white rounded py-2"
+              >
                 <img src={item.icon} className="size-8 object-contain" />
-                <p className="text-xs text-black font-semibold p-1">{item.name}</p>
+                <p className="text-xs text-black font-semibold p-1">
+                  {item.name}
+                </p>
               </li>
             ))}
           </ul>
           <ul className="flex flex-wrap w-full gap-2 border-r-4 border-slate-700 pr-2">
             {skills[1].front.map((item) => (
-              <li key={item.name}  className="flex flex-col gap-1 items-center justify-center bg-white rounded py-2">
+              <li
+                key={item.name}
+                className="flex flex-col gap-1 items-center justify-center bg-white rounded py-2"
+              >
                 <img src={item.icon} className="size-8 object-contain" />
                 <p className="text-xs text-black font-bold p-1">{item.name}</p>
               </li>
@@ -89,7 +98,10 @@ function AboutSummary() {
           </ul>
           <ul className="flex flex-wrap w-full gap-2 border-r-4 border-slate-700 pr-2">
             {skills[2].back.map((item) => (
-              <li key={item.name}  className="flex flex-col gap-1 items-center justify-center bg-white rounded py-2">
+              <li
+                key={item.name}
+                className="flex flex-col gap-1 items-center justify-center bg-white rounded py-2"
+              >
                 <img src={item.icon} className="size-8 object-contain" />
                 <p className="text-xs text-black font-bold p-1">{item.name}</p>
               </li>
@@ -97,7 +109,10 @@ function AboutSummary() {
           </ul>
           <ul className="flex flex-wrap w-full gap-2 border-r-4 border-slate-700 pr-2">
             {skills[3].database.map((item) => (
-              <li key={item.name} className="flex flex-col gap-1 items-center justify-center bg-white rounded py-2">
+              <li
+                key={item.name}
+                className="flex flex-col gap-1 items-center justify-center bg-white rounded py-2"
+              >
                 <img src={item.icon} className="size-8 object-contain" />
                 <p className="text-xs text-black font-bold p-1">{item.name}</p>
               </li>
@@ -114,11 +129,15 @@ function AboutFull() {
     <div className="space-y-5">
       {" "}
       <p className="text-slate-500">
-        With <span className="text-slate-400"> {new Date().getFullYear() - 2021} years</span> of hands-on
-        experience and technical expertise in crafting robust and user-eccentric
-        web applications. My journey in web development began with a fervent
-        curiousity with how the web and internet works, which led me into the
-        rabbit hole of front-end and back-end technologies.
+        With{" "}
+        <span className="text-slate-400">
+          {" "}
+          {new Date().getFullYear() - 2021} years
+        </span>{" "}
+        of hands-on experience and technical expertise in crafting robust and
+        user-eccentric web applications. My journey in web development began
+        with a fervent curiousity with how the web and internet works, which led
+        me into the rabbit hole of front-end and back-end technologies.
       </p>
       <p className="text-teal-500">
         On the front-end, I excel in crafting intuitive and responsive user
