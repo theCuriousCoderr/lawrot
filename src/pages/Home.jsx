@@ -66,7 +66,7 @@ function Home() {
         <div className="absolute size-[100rem] border border-slate-800 rounded-full"></div>
       </div>
 
-      <MyInfo goTo={goTo} view={view} />
+      <MyInfo goTo={goTo} view={view} setView={setView} />
       <div
         id="target"
         onScroll={() => getView("target")}

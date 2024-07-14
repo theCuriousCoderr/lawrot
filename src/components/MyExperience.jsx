@@ -66,7 +66,7 @@ function MyExperience({ view, expLen }) {
                 className="w-full"
               >
                 <Link
-                  href={items.link}
+                  to={items.link}
                   target="_blank"
                   className="block w-full group border-slate-400 bg-red-40 space-y-2 xl:flex xl:items-start xl:space-y-0 bg-red-40 xl:hover:bg-teal-800 xl:hover:bg-opacity-10 xl:p-3 rounded-md"
                 >

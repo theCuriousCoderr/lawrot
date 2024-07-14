@@ -67,8 +67,7 @@ function WorkingExperience({ view, expLen }) {
                 id={id === experience.length - 1 ? "last" : "none"}
                 className="w-full"
               >
-                <Link
-                  href={items.link}
+                <Link to={items.link}
                   target="_blank"
                   className="block w-full group border-slate-400 bg-red-40 space-y-2 xl:flex xl:items-start xl:space-y-0 bg-red-40 xl:hover:bg-teal-800 xl:hover:bg-opacity-10 xl:p-3 rounded-md"
                 >
@@ -88,13 +87,13 @@ function WorkingExperience({ view, expLen }) {
                       </div>
                       <div>
                         {items.link && (
-                          <a
-                            href={items.link}
+                          <Link
+                            to={items.link}
                             target="_blank"
                             className="text-sm -rotate-45 hover:text-blue-600"
                           >
                             <ArrowForward sx={{ fontSize: 20 }} />
-                          </a>
+                          </Link>
                         )}
                       </div>
                     </div>

@@ -4,7 +4,7 @@ import SendMail from "./SendMail";
 import { NavLink } from "react-router-dom";
 import CV from "../../Ola_CV.pdf";
 
-function MyInfo({ view, goTo }) {
+function MyInfo({ view, goTo, setView }) {
   const [openEmail, setOpenEmail] = useState(false);
   const socialLinks = [
     { link: "https://github.com/Lambdola", icon: <GitHub /> },
@@ -46,7 +46,7 @@ function MyInfo({ view, goTo }) {
                 onClick={() => goTo(items.section)}
                 className="w-full"
               >
-                <button className="w-ful group flex items-center gap-2 cursor-pointer">
+                <button onClick={() => setView(items.section)} className="w-ful group flex items-center gap-2 cursor-pointer">
                   <div
                     className={`group-hover:w-16 group-hover:bg-white ${
                       view === items.section
@@ -54,6 +54,7 @@ function MyInfo({ view, goTo }) {
                         : "w-5 bg-slate-500"
                     } h-[.2px] transition-all`}
                   ></div>
+                 
                   <p
                     className={`group-hover:font-semibold group-hover:text-slate-300 ${
                       view === items.section
