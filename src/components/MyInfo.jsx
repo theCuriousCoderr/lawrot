@@ -46,7 +46,10 @@ function MyInfo({ view, goTo, setView }) {
                 onClick={() => goTo(items.section)}
                 className="w-full"
               >
-                <button onClick={() => setView(items.section)} className="w-ful group flex items-center gap-2 cursor-pointer">
+                <button
+                  onClick={() => setView(items.section)}
+                  className="w-ful group flex items-center gap-2 cursor-pointer"
+                >
                   <div
                     className={`group-hover:w-16 group-hover:bg-white ${
                       view === items.section
@@ -54,7 +57,7 @@ function MyInfo({ view, goTo, setView }) {
                         : "w-5 bg-slate-500"
                     } h-[.2px] transition-all`}
                   ></div>
-                 
+
                   <p
                     className={`group-hover:font-semibold group-hover:text-slate-300 ${
                       view === items.section
@@ -76,7 +79,7 @@ function MyInfo({ view, goTo, setView }) {
           href={CV}
           download
           target="_blank"
-          className="w-2/3 font-medium text-base text-emerald-400 xl:text-emerald-200 xl:bg-emerald-600  hover:bg-emerald-900 px-5 py-2 rounded-md flex items-center justify-center"
+          className="w-2/3 font-medium text-base text-emerald-600 bg-emerald-200  hover:bg-emerald-900 px-5 py-2 rounded-md flex items-center justify-center"
         >
           <span className="">Download Resume</span>
         </a>
@@ -98,12 +101,6 @@ function MyInfo({ view, goTo, setView }) {
                     {items.icon}{" "}
                   </div>{" "}
                 </a>
-                // Mail Icon Button
-                // <button onClick={() => setOpenEmail(!openEmail)}>
-                //   <div className={` hover:text-pink-500 ${openEmail ? "text-pink-500" : "text-slate-400"} `}>
-                //     {items.icon}
-                //   </div>
-                // </button>
               )}
             </li>
           ))}
