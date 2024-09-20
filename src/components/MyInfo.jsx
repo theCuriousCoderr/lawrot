@@ -79,7 +79,7 @@ function MyInfo({ view, goTo, setView }) {
           href={CV}
           download
           target="_blank"
-          className="w-2/3 font-medium text-base text-emerald-600 bg-emerald-200  hover:bg-emerald-900 px-5 py-2 rounded-md flex items-center justify-center"
+          className="w-2/3 font-medium text-base text-white bg-orange-400  hover:bg-emerald-900 px-5 py-2 rounded-md flex items-center justify-center"
         >
           <span className="">Download Resume</span>
         </a>

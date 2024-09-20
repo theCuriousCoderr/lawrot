@@ -176,7 +176,7 @@ function AboutFull() {
 }
 
 function AboutMe({ view }) {
-  const [summary, setSummary] = useState(false);
+  const [summary, setSummary] = useState(true);
   return (
     <div id="aboutMe" className={`section bg-yellow-40 line-clamp space-y-5`}>
       <div
@@ -196,7 +196,7 @@ function AboutMe({ view }) {
             onClick={() => setSummary(!summary)}
             className={`font-medium font-inter w-24 text-center p-3 border ${
               summary
-                ? "text-slate-600 border-slate-800 hover:text-slate-400"
+                ? "text-slate-400 border-slate-800 hover:text-slate-400"
                 : "text-white border-slate-900"
             } `}
           >
@@ -206,7 +206,7 @@ function AboutMe({ view }) {
             onClick={() => setSummary(!summary)}
             className={`w-24 text-center bg-red-80 border ${
               !summary
-                ? "text-slate-600 border-slate-800 hover:text-slate-400"
+                ? "text-slate-400 border-slate-800 hover:text-slate-400"
                 : "text-white border-slate-900"
             } `}
           >

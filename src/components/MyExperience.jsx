@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import experienceData from "../utils/experience";
-import { ArrowBack, ArrowForward, FilterAlt } from "@mui/icons-material";
+import { ArrowForward, FilterAlt } from "@mui/icons-material";
 import CV from "../../Ola_CV.pdf";
 import { Link } from "react-router-dom";
 
@@ -32,7 +32,7 @@ function MyExperience({ view, expLen }) {
       className="section text-white bg-blue-40 w-full mt-28 xl:mt-40"
     >
       <h2 className="hidden xl:block my-5 text-xl text-teal-400 font-bold">
-        MY PROJECT&apos; EXPERIENCE
+        MY PROJECTS EXPERIENCE
       </h2>
       <div
         className={`xl:hidden font-medium font-inter flex gap-5 items-end ${
@@ -41,7 +41,7 @@ function MyExperience({ view, expLen }) {
             : "relative my-5"
         }`}
       >
-        <p>PROJECTS&apos;S EXPERIENCE</p>
+        <p>PROJECTS EXPERIENCE</p>
         <div className="relative w-48 bg-red-30 bg-clip-text bg-gradient-to-r from-orange-500 to-[20%] to-pink-500">
           <div className="absolute text-slate-500 right-0 bottom-1">
             <FilterAlt sx={{ fontSize: 20 }} />
@@ -78,7 +78,7 @@ function MyExperience({ view, expLen }) {
                   <div className="space-y-2 xl:w-2/3 xl:space-y-3 bg-red-30">
                     <div
                       onClick={() => window.open(items.link, "_blank")}
-                      className="group-hover:text-teal-200 cursor-pointer text-slate-300 flex items-center gap-2"
+                      className="group-hover:text-teal-200 group-hover:underline cursor-pointer text-slate-300 flex items-center gap-2"
                     >
                       <p>{items.role}</p>
                       <div className="w-[1px] h-4 bg-slate-200"></div>
@@ -115,12 +115,12 @@ function MyExperience({ view, expLen }) {
           })}
       </ul>
 
-      <div className="my-10 xl:hidden">
+      <div className="my-10">
         <a
           href={CV}
           download
           target="_blank"
-          className=" w-full font-medium text-base text-emerald-200 bg-emerald-400 hover:bg-emerald-900 bg-opacity-40 px-5 py-2 rounded-md flex items-center justify-center"
+          className=" w-full font-medium text-base text-white bg-orange-400 hover:bg-emerald-900 px-5 py-2 rounded-md flex items-center justify-center"
         >
           <span className="">Download Resume</span>
         </a>

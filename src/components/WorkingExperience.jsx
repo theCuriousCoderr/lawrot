@@ -42,20 +42,8 @@ function WorkingExperience({ view, expLen }) {
             : "relative my-5"
         }`}
       >
-        <p className="text-teal-400">MY PROFESSIONAL EXPERIENCE</p>
-        <div className="relative w-48 bg-red-30 bg-clip-text bg-gradient-to-r from-orange-500 to-[20%] to-pink-500">
-          <div className="absolute text-slate-500 right-0 bottom-1">
-            <FilterAlt sx={{ fontSize: 20 }} />
-          </div>
-          <input
-            id="filter"
-            onChange={filterExperience}
-            autoComplete="off"
-            spellCheck={false}
-            className="w-full caret-slate-400 h-full py-1 bg-transparent text-transparent border-b border-slate-500 outline-none text-slate-300 focus-within:border-orange-400 placeholder:text-slate-600 placeholder:font-light placeholder:text-sm"
-            placeholder="Filter experence"
-          />
-        </div>
+        <p className="">MY PROFESSIONAL EXPERIENCE</p>
+       
       </div>
       <ul className="space-y-10">
         {workingExperienceData &&
@@ -81,7 +69,7 @@ function WorkingExperience({ view, expLen }) {
                       onClick={() => window.open(items.link, "_blank")}
                       className="group-hover:text-teal-200 cursor-pointer text-slate-300 flex items-center gap-2"
                     >
-                      <div>
+                      <div className="group-hover:underline">
                         <p className="text-slate-400">{items.role}</p>
                         <p className="text-slate-50">{items.company}</p>
                       </div>
