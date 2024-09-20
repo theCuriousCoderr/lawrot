@@ -137,7 +137,7 @@ function AboutFull() {
         of hands-on experience and technical expertise in crafting robust and
         user-eccentric web applications. My journey in web development began
         with a fervent curiousity with how the web and internet works, which led
-        me into the rabbit hole of front-end and back-end technologies.
+        me into the rabbit hole of front-end and back-end technologies .
       </p>
       <p className="text-teal-500">
         On the front-end, I excel in crafting intuitive and responsive user
