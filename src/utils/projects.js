@@ -5,6 +5,8 @@ import toggle from '../images/toggle.png'
 import trail from '../images/trail.png'
 import airbnb from '../images/airbnb.png'
 import gleja from '../images/gleja.png'
+import digistream from '../images/digistream.jpg' 
+import keycount from '../images/keycount.jpg'
 
 const projectsData = [
     {
@@ -137,6 +139,24 @@ const projectsData = [
       desc: "A replication of the intuitive and user-friendly interface of the popular vacation rental platform, Airbnb. ",
       tools: ["Angular", "Tailwind CSS", "Swiper.js", "Google Icons", "Vercel"],
       link: 'https://airbnb-clone-lemon-three.vercel.app/home'
+    },
+    {
+      period: { start: "OCT 2024", end: "OCT 2024" },
+      photo: digistream,
+      role: "Full-Stack Web Developer",
+      company: "DigiStream",
+      desc: "A digital solution to solving administrative tasks amongst students of the University of Ibadan, such as course registration",
+      tools: ["NextJS", "Tailwind CSS", "Pdf-lib", "Zustand", "Vercel"],
+      link: 'https://digistream-theta.vercel.app/'
+    },
+    {
+      period: { start: "OCT 2024", end: "OCT 2024" },
+      photo: keycount,
+      role: "A Curious Developer",
+      company: "KeyCount",
+      desc: "This is a simple dashboard for a lightweight VS Code extension that keeps track and count of the number of times a keyboard button was pressed while you work.",
+      tools: ["VS Code API", "MongoDB", "NextJS", "Tailwind CSS", "NodeJS"],
+      link: 'https://marketplace.visualstudio.com/items?itemName=OlalekanOladimeji.KeyCount'
     }
   ];
 

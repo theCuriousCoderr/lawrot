@@ -15,6 +15,7 @@ import node from "../images/nodejs.png";
 import express from "../images/express.png";
 import flask from "../images/flask.png";
 import ts from "../images/typescript.png";
+import SkillsCard from "./SkillsCard";
 
 function AboutSummary() {
   const skills = [
@@ -61,10 +62,10 @@ function AboutSummary() {
   return (
     <div className="text-slate-500 space-y-5">
       <p className="text-slate-500 font-[Inter">
-        I am a developer with {new Date().getFullYear() - 2021} years of
-        hands-on experience and technical expertise in developing responsive,
-        optimised and scalable web applications on both the Frontend and
-        Backend.
+        I am a developer with {new Date().getFullYear() - 2022} years of
+        practical experience and technical expertise in building responsive,
+        optimized, and scalable web applications, specializing in both Frontend
+        and Backend development.
       </p>
       <div className="space-y-5">
         <p className="font-inte">
@@ -74,47 +75,29 @@ function AboutSummary() {
         <div className="space-y-5">
           <ul className="flex flex-wrap w-full gap-2 border-r-4 border-slate-700 pr-2">
             {skills[0].lang.map((item) => (
-              <li
-                key={item.name}
-                className="flex flex-col gap-1 items-center justify-center bg-white rounded py-2"
-              >
-                <img src={item.icon} className="size-8 object-contain" />
-                <p className="text-xs text-black font-semibold p-1">
-                  {item.name}
-                </p>
+              <li key={item.name}>
+                <SkillsCard icon={item.icon} name={item.name} />
               </li>
             ))}
           </ul>
           <ul className="flex flex-wrap w-full gap-2 border-r-4 border-slate-700 pr-2">
             {skills[1].front.map((item) => (
-              <li
-                key={item.name}
-                className="flex flex-col gap-1 items-center justify-center bg-white rounded py-2"
-              >
-                <img src={item.icon} className="size-8 object-contain" />
-                <p className="text-xs text-black font-bold p-1">{item.name}</p>
+              <li key={item.name}>
+                <SkillsCard icon={item.icon} name={item.name} />
               </li>
             ))}
           </ul>
           <ul className="flex flex-wrap w-full gap-2 border-r-4 border-slate-700 pr-2">
             {skills[2].back.map((item) => (
-              <li
-                key={item.name}
-                className="flex flex-col gap-1 items-center justify-center bg-white rounded py-2"
-              >
-                <img src={item.icon} className="size-8 object-contain" />
-                <p className="text-xs text-black font-bold p-1">{item.name}</p>
+              <li key={item.name} className="">
+                <SkillsCard icon={item.icon} name={item.name} />
               </li>
             ))}
           </ul>
           <ul className="flex flex-wrap w-full gap-2 border-r-4 border-slate-700 pr-2">
             {skills[3].database.map((item) => (
-              <li
-                key={item.name}
-                className="flex flex-col gap-1 items-center justify-center bg-white rounded py-2"
-              >
-                <img src={item.icon} className="size-8 object-contain" />
-                <p className="text-xs text-black font-bold p-1">{item.name}</p>
+              <li key={item.name}>
+                <SkillsCard icon={item.icon} name={item.name} />
               </li>
             ))}
           </ul>
@@ -132,7 +115,7 @@ function AboutFull() {
         With{" "}
         <span className="text-slate-400">
           {" "}
-          {new Date().getFullYear() - 2021} years
+          {new Date().getFullYear() - 2022} years
         </span>{" "}
         of hands-on experience and technical expertise in crafting robust and
         user-eccentric web applications. My journey in web development began

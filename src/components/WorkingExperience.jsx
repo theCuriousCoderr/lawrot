@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import experienceData from "../utils/experience";
 import { ArrowBack, ArrowForward, FilterAlt } from "@mui/icons-material";
-import CV from "../../Ola_CV.pdf";
+import CV from "../../Olalekan_Oladimeji_Segun_Full_Stack_Resume.pdf";
 import workingExperienceData from "../utils/workingExperience";
 import { Link } from "react-router-dom";
 
@@ -47,7 +47,7 @@ function WorkingExperience({ view, expLen }) {
       </div>
       <ul className="space-y-10">
         {workingExperienceData &&
-          workingExperienceData.map((items, id) => {
+          workingExperienceData.slice().reverse().map((items, id) => {
             return (
               <li
                 role="button"

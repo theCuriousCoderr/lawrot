@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import experienceData from "../utils/experience";
 import { ArrowForward, FilterAlt } from "@mui/icons-material";
-import CV from "../../Ola_CV.pdf";
+import CV from "../../Olalekan_Oladimeji_Segun_Full_Stack_Resume.pdf";
 import { Link } from "react-router-dom";
 
 function MyExperience({ view, expLen }) {
@@ -115,7 +115,7 @@ function MyExperience({ view, expLen }) {
           })}
       </ul>
 
-      <div className="my-10">
+      <div className="my-10 xl:hidden">
         <a
           href={CV}
           download

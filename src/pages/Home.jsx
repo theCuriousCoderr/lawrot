@@ -5,6 +5,7 @@ import MyExperience from "../components/MyExperience";
 import MyProjects from "../components/MyProjects";
 import experienceData from "../utils/experience";
 import WorkingExperience from "../components/WorkingExperience";
+import Ripples from "../components/Ripples";
 
 function Home() {
   const [view, setView] = useState("aboutMe");
@@ -38,10 +39,11 @@ function Home() {
       if (expLen < experienceData.length) {
         setTimeout(() => {
           setExpLen(expLen + 3);
-        }, 1500);
+        }, 2000);
       }
     }
   }
+
   function goTo(id) {
     let el = document.getElementById(id).getBoundingClientRect();
     let target = document.getElementById("target");
@@ -51,20 +53,9 @@ function Home() {
   return (
     <div
       onScroll={() => getView("root")}
-      className="z-20 relative selection:bg-orange-400 selection:bg-opacity-20 root h-screen overflow-scroll xl:overflow-hidden bg-slate-900 px-5 py-8 xl:py-0 xl:h-screen xl:flex "
+      className="z-20 relative selection:bg-teal-500 root h-screen overflow-scroll xl:overflow-hidden bg-slate-900 px-5 py-8 xl:py-0 xl:h-screen xl:flex "
     >
-      <div className="fixed animate-ping flex items-center justify-center bg-red-300 -z-10">
-        <div className="absolute size-[10rem] border border-slate-800 rounded-full"></div>
-        <div className="absolute size-[20rem] border border-slate-800 rounded-full"></div>
-        <div className="absolute size-[30rem] border border-slate-800 rounded-full"></div>
-        <div className="absolute size-[40rem] border border-slate-800 rounded-full"></div>
-        <div className="absolute size-[50rem] border border-slate-800 rounded-full"></div>
-        <div className="absolute size-[60rem] border border-slate-800 rounded-full"></div>
-        <div className="absolute size-[70rem] border border-slate-800 rounded-full"></div>
-        <div className="absolute size-[80rem] border border-slate-800 rounded-full"></div>
-        <div className="absolute size-[90rem] border border-slate-800 rounded-full"></div>
-        <div className="absolute size-[100rem] border border-slate-800 rounded-full"></div>
-      </div>
+     <Ripples />
 
       <MyInfo goTo={goTo} view={view} setView={setView} />
       <div
