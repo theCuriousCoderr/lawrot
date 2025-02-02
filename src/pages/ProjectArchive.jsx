@@ -24,6 +24,7 @@ function ProjectArchive() {
         </h1>
       </div>
       <div className="mt-16">
+        {/* mobile */}
         <table className="xl:hidden w-full">
           <tr className="z-10 font-semibold text-slate-400 bg-slate-900 text-left sticky top-0">
             <th className="w-[25%] py-5">Year</th>
@@ -49,6 +50,7 @@ function ProjectArchive() {
           })}
         </table>
 
+        {/* desktop */}
         <table className="hidden xl:block w-full">
           <tr className="z-10 flex items-center font-semibold text-slate-400 bg-slate-900 text-left sticky top-0">
             <th className="w-[10%] py-5">Year</th>
@@ -59,7 +61,7 @@ function ProjectArchive() {
           </tr>
           {projects.map((items) => {
             return (
-              <tr className="border-t-[.5px] w-full flex items-center border-slate-700 hover:bg-gradient-to-r hover:from-transparent hover:to-slate-800 hover:border-l-0 ">
+              <tr key={items.company}  onClick={() => window.open(items.link, "_blank")} className="cursor-pointer border-t-[.5px] w-full flex items-center border-slate-700 hover:bg-gradient-to-r hover:from-transparent hover:to-slate-800 hover:border-l-0 ">
                 <td className="text-slate-400 text-sm w-[10%]">
                   {items.period.start.slice(-4)}
                 </td>
@@ -80,7 +82,7 @@ function ProjectArchive() {
                   ))}
                 </td>
                 <td
-                  onClick={() => window.open(items.link, "_blank")}
+                 
                   className="flex overflow-scrol no-scrollbar w-[20%] text-slate-200 hover:text-teal-200 text-sm font-bold group transition-all"
                 >
                   <p className="w-[90%] line-clamp-1">{items.link.replace("https://", "")}</p>

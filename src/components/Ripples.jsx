@@ -1,6 +1,6 @@
 export default function Ripples() {
   return (
-    <div className="fixed animate-ping flex items-center justify-center bg-red-300 -z-10">
+    <div className="fixed animate-ping duration-1000 flex items-center justify-center bg-red-300 -z-10">
       {[
         "size-[10rem]",
         "size-[20rem]",
