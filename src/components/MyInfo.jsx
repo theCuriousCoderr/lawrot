@@ -37,7 +37,6 @@ function MyInfo({ view, goTo, setView }) {
         <p>
           I build responsive, optimised pixel-perfect and scalable web
           applications.
-          <br />I treat my job as if my life depends on it, because it does. 😂
         </p>
 
         <p>
