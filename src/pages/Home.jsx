@@ -113,15 +113,14 @@ function Home() {
 
     setTimeout(() => {
       let spot = possibleWinLineForCPU(positions);
-      if (!spot) {
+      if (!spot && spot !== 0) {
         spot = possibleWinLineForPlayer(positions);
-        if (!spot) {
+        if (!spot && spot !== 0) {
           spot = emptySpotForCPU(positions);
         }
       }
 
       console.log("CPU SPOT", spot);
-      // _possibleWinLineForPlayer = emptySpot(board);
 
       let copy = [...positions];
       if (copy[spot] !== "none") return;
@@ -291,13 +290,19 @@ function Home() {
       let isLineAWin = line.filter((val) => val === role.player).length === 2;
       if (isLineAWin) {
         let leakIndex = line.indexOf("none");
-        let _isSpotEmpty = isSpotEmpty(board, leakIndex);
-        if (_isSpotEmpty) {
-          _possibleWinLineForPlayer.push(cheat[index.toString()][leakIndex]);
-          return;
-        }
+        _possibleWinLineForPlayer.push(cheat[index.toString()][leakIndex]);
+        console.log("Returning ...")
+        return
+
+        // let _isSpotEmpty = isSpotEmpty(board, leakIndex);
+        // if (_isSpotEmpty) {
+        //   _possibleWinLineForPlayer.push(cheat[index.toString()][leakIndex]);
+        //   return;
+        // }
       }
     });
+    console.log("Returned")
+
     if (_possibleWinLineForPlayer.length === 0) {
       return null;
     }
@@ -334,10 +339,11 @@ function Home() {
       let isLineAWin = line.filter((val) => val === role.cpu).length === 2;
       if (isLineAWin) {
         let leakIndex = line.indexOf("none");
-        let _isSpotEmpty = isSpotEmpty(board, leakIndex);
-        if (_isSpotEmpty) {
-          _possibleWinSpotForCPU.push(cheat[index.toString()][leakIndex]);
-        }
+         _possibleWinSpotForCPU.push(cheat[index.toString()][leakIndex]);
+        // let _isSpotEmpty = isSpotEmpty(board, leakIndex);
+        // if (_isSpotEmpty) {
+        //   _possibleWinSpotForCPU.push(cheat[index.toString()][leakIndex]);
+        // }
       }
     });
 
@@ -382,8 +388,14 @@ function Home() {
     layout.forEach((line, index) => {
       let hasEmpty = line.some((val) => val === "none");
       if (hasEmpty) {
-        let leakIndex = line.indexOf("none");
-        emptySpots.push(cheat[index.toString()][leakIndex]);
+        // let leakIndex = line.indexOf("none");
+        for (let spot in line) {
+          if (line[spot] === "none") {
+            // let leakIndex = line.indexOf(spot);
+            emptySpots.push(cheat[index.toString()][spot]);
+          }
+        }
+       
       }
     });
 
@@ -431,6 +443,7 @@ function Home() {
       {openCharacterSelect && (
         <CharacterSelect role={role} setRole={setRole} setGame={setGame} />
       )}
+
       <AnimatePresence>
         {winner !== "" && (
           <WinnerModal winner={winner} playAgain={playAgain} quit={quit} />
@@ -438,14 +451,17 @@ function Home() {
       </AnimatePresence>
 
       <Header role={role} options={options} />
-      <div className="fixed w-full mt-24 xs:max-md:mt-20 h-[calc(100vh_-_6rem)] xs:max-md:h-[calc(100vh_-_5rem)] xs:max-md:px-10 flex flex-col items-center justify-center bg-[rgb(20,23,227)]/90 py-5 layout">
-        <h1 className="absolute w-full top-10 text-center text-3xl font-bold text-white">
-          THE ULTIMATE TIC-TAC-TOE
-        </h1>
-        <p className="absolute top-20 font-medium text-white">
-          <q className="">{options[turn].name}</q> turn to play
-        </p>
-        <ul className="relative z-30 portrait:w-[70%] landscape:h-[70%] aspect-square max-w-[600px] grid grid-cols-3 board ">
+      <div className="fixed w-full mt-24 xs:max-md:mt-20 h-[calc(100vh_-_6rem)] xs:max-md:h-[calc(100vh_-_5rem)] xs:max-md:px-5 flex flex-col items-center justify-center bg-[rgb(20,23,227)]/90 py-5 layout">
+        <div className="absolute w-full top-5 space-y-2 xs:max-md:top-0 bg-red-40">
+          <h1 className=" w-full top-10 xs:max-md:top-2 text-center text-3xl xs:max-md:text-lg font-bold text-white">
+            THE ULTIMATE TIC-TAC-TOE
+          </h1>
+          <p className="text-center xs:max-md:text-sm font-medium text-white">
+            <q className="">{options[turn].name}</q> turn to play
+          </p>
+        </div>
+
+        <ul className="relative z-30 portrait:w-[70%] xs:max-md:portrait:w-[100%] landscape:h-[70%] aspect-square max-w-[600px] grid grid-cols-3 board bg-red-40 ">
           {positions.map((square, index) => {
             return (
               <li
@@ -466,11 +482,13 @@ function Home() {
             );
           })}
         </ul>
-        <div className="fixed w-full left-0 bottom-10">
+
+        <div className="fixed w-full left-0 bottom-10 xs:max-md:bottom-6 xs:max-md:px-5">
           <div className="w-full max-w-[400px] mx-auto">
-            <div className="w-full mx-auto h-10 flex justify-between items-center">
-              <div className="h-full">
-                <div className="h-full flex gap-2 items-center bg-white rounded-full">
+            <div className="w-full mx-auto h-10 xs:max-md:h-8 flex justify-between items-center">
+              {/* player 1 */}
+              <div className="h-full xs:max-md:w-16">
+                <div className="h-full flex gap-2 xs:max-md:gap-1  items-center bg-white rounded-full">
                   <div className="h-full aspect-square rounded-full bg-green-500">
                     <figure className="size-full relative">
                       <img
@@ -480,16 +498,19 @@ function Home() {
                       />
                     </figure>
                   </div>
-                  <p className="text-lg font-medium tracking-wider mr-5">
+                  <p className="text-lg xs:max-md:text-sm font-medium tracking-wider mr-5">
                     {scores[role.player]}
                   </p>
                 </div>
-                <p className="font-medium text-white">PLAYER 1</p>
+                <p className="font-medium xs:max-md:text-sm text-nowrap text-white">
+                  PLAYER 1
+                </p>
               </div>
 
-              <div className="h-full">
-                <div className="h-full flex gap-2 items-center bg-white rounded-full">
-                  <p className="text-lg font-medium tracking-wider ml-5">
+              {/* player 2 */}
+              <div className="h-full xs:max-md:w-16">
+                <div className="h-full flex w-full gap-2 xs:max-md:gap-1 items-center justify-end bg-white rounded-full">
+                  <p className="text-lg xs:max-md:text-sm font-medium tracking-wider ml-5">
                     {scores[role.cpu]}
                   </p>
                   <div className="h-full aspect-square rounded-full bg-green-500">
@@ -503,7 +524,9 @@ function Home() {
                   </div>
                 </div>
 
-                <p className="font-medium text-white">PLAYER 2</p>
+                <p className="font-medium xs:max-md:text-sm text-nowrap text-white">
+                  PLAYER 2
+                </p>
               </div>
             </div>
           </div>

@@ -19,13 +19,13 @@ function Header({ role, options }) {
               />
             </figure>
           </div>
-          <p className="text-lg xs:max-md:text-sm text-nowrap font-medium tracking-wider xs:max-md:tracking-normal mr-5">
+          <p className="text-lg xs:max-500:hidden text-nowrap font-medium tracking-wider xs:max-md:tracking-normal mr-5">
             {options[role.player].name}
           </p>
         </div>
-        <p className="font-bold text-4xl">VS</p>
+        <p className="font-bold text-4xl xs:max-md:text-base">VS</p>
         <div className="h-full flex gap-2 items-center bg-white p-2 xs:max-md:p-1 rounded-full">
-          <p className="text-lg xs:max-md:text-sm font-medium tracking-wider xs:max-md:tracking-normal ml-5">
+          <p className="text-lg xs:max-500:hidden font-medium tracking-wider xs:max-md:tracking-normal ml-5">
             {" "}
             {options[role.cpu].name}
           </p>
