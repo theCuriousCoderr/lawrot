@@ -288,7 +288,8 @@ function Home() {
 
     layout.forEach((line, index) => {
       let isLineAWin = line.filter((val) => val === role.player).length === 2;
-      if (isLineAWin) {
+      let hasNone = line.filter((val) => val === "none").length === 1;
+      if (isLineAWin && hasNone ) {
         let leakIndex = line.indexOf("none");
         _possibleWinLineForPlayer.push(cheat[index.toString()][leakIndex]);
         console.log("Returning ...")
@@ -308,6 +309,7 @@ function Home() {
     }
 
     console.log(`C: CPU saw a possible block spot`);
+    console.log({_possibleWinLineForPlayer});
     return _possibleWinLineForPlayer[0];
   }
 
@@ -337,7 +339,9 @@ function Home() {
 
     layout.forEach((line, index) => {
       let isLineAWin = line.filter((val) => val === role.cpu).length === 2;
-      if (isLineAWin) {
+     
+      let hasNone = line.filter((val) => val === "none").length === 1;
+      if (isLineAWin && hasNone) {
         let leakIndex = line.indexOf("none");
          _possibleWinSpotForCPU.push(cheat[index.toString()][leakIndex]);
         // let _isSpotEmpty = isSpotEmpty(board, leakIndex);
