@@ -7,17 +7,21 @@ Square.propTypes = {
   options: PropTypes.object,
   makeMove: PropTypes.func,
   disableSquare: PropTypes.bool,
-  winningLine: PropTypes.array
+  winningLine: PropTypes.array,
+  winner: PropTypes.string,
 };
 
-function Square({ count, index, options, makeMove, disableSquare, winningLine }) {
+function Square({ count, index, options, makeMove, disableSquare, winningLine, winner }) {
+  const winColor = winner === "one" ? "bg-green-500" : "bg-yellow-500"
+   const winColorHover = winner === "one" ? "hover:bg-green-500/100" : "hover:bg-yellow-500/100"
   return (
     <div className="size-full">
+      {winner}
       <button
         disabled={disableSquare}
         onClick={() => makeMove(index)}
-        className={`${winningLine.includes(parseInt(index)) && "bg-green-500"} size-full flex items-center justify-center hover:bg-slate-100/20 ${
-          disableSquare && "hover:bg-transparent cursor-not-allowed"
+        className={`${winningLine.includes(parseInt(index)) && winColor} size-full flex items-center justify-center  ${
+          disableSquare && winningLine.includes(parseInt(index))  ? `${winColorHover} cursor-not-allowed` : "hover:bg-slate-100/20"
         }`}
       >
         <figure className="w-[70%] aspect-square rounded-full flex items-center justify-center bg-red-40">

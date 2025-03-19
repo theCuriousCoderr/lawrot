@@ -213,6 +213,7 @@ function Home() {
       );
 
       setWinningLine(cheat[id.toString()]);
+      setDisableSquare(true);
 
       console.log(playerWin);
       // setWinningLine(playerWin);
@@ -221,7 +222,7 @@ function Home() {
       }, 2000);
 
       setTimeout(() => {
-        setDisableSquare(true);
+        
         setScores({ ...scores, [role.player]: scores[role.player] + 1 });
       }, 1000);
 
@@ -240,6 +241,7 @@ function Home() {
       );
 
       setWinningLine(cheat[id.toString()]);
+      setDisableSquare(true);
       console.log(cheat[id.toString()]);
       // setWinningLine(cpuWin);
       setTimeout(() => {
@@ -247,7 +249,7 @@ function Home() {
       }, 2000);
 
       setTimeout(() => {
-        setDisableSquare(true);
+        
         setScores({ ...scores, [role.cpu]: scores[role.cpu] + 1 });
       }, 1000);
 
@@ -481,13 +483,14 @@ function Home() {
                   makeMove={makeMove}
                   disableSquare={disableSquare}
                   winningLine={winningLine}
+                  winner={winner}
                 />
               </li>
             );
           })}
         </ul>
 
-        <div className="xs:max-md:hidden fixed w-full left-0 bottom-10 xs:max-md:bottom-6 xs:max-md:px-5">
+        <div className="xs:max-500:hidden fixed z-30 w-full left-0 bottom-10 xs:max-md:bottom-6 xs:max-md:px-5">
           <div className="w-full max-w-[400px] mx-auto">
             <div className="w-full mx-auto h-10 xs:max-md:h-8 flex justify-between items-center">
               {/* player 1 */}
