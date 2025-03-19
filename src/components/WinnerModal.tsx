@@ -32,9 +32,9 @@ function WinnerModal({ playAgain, quit, winner }) {
     <motion.div
       initial={{ x: 0, scale: 0.5, borderRadius: 40 }}
       animate={{ x: 0, scale: 1, borderRadius: 0 }}
-      exit={{ x: "100%" }}
-      transition={{ duration: 0, ease: "circIn" }}
-      className="fixed top-0 z-10 h-screen w-full bg-black opacity-  flex flex-col gap-2 items-center justify-center"
+      exit={{ x: "100vw" }}
+      transition={{ duration: 0.1, ease: "circIn" }}
+      className="fixed top-0 z-20 h-screen w-full bg-black opacity-  flex flex-col gap-2 items-center justify-center"
     >
       <motion.div
         initial={{ y: 200 }}

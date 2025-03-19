@@ -20,7 +20,7 @@ function Square({ count, index, options, makeMove, disableSquare, winningLine })
           disableSquare && "hover:bg-transparent cursor-not-allowed"
         }`}
       >
-        <figure className="size-20 rounded-full flex items-center justify-center">
+        <figure className="w-[70%] aspect-square rounded-full flex items-center justify-center bg-red-40">
           {count === "one" || count === "two" ? (
             <motion.img
               // initial={{scale: 0.2}}
@@ -28,14 +28,14 @@ function Square({ count, index, options, makeMove, disableSquare, winningLine })
               transition={{ ease: "circOut" }}
               src={options[count].image}
               alt="avatar 1"
-              className={`object-cover object-center border-2 border-black rounded-full ${
+              className={`object-cover object-center border-2 border-black rounded-full size-full ${
                 disableSquare && "opacity-20"
               } `}
             />
           ) : (
             <figure className="size-full"></figure>
           )}
-          {count === "none" && <figure className=""></figure>}
+          {/* {count === "none" && <figure className=""></figure>} */}
         </figure>
       </button>
     </div>

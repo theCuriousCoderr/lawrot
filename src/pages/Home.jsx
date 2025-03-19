@@ -443,7 +443,7 @@ function Home() {
   }
 
   return (
-    <div className="h-screen w-full">
+    <div className="h-screen w-full bg-[rgb(20,23,227) bg-red-5">
       {openCharacterSelect && (
         <CharacterSelect role={role} setRole={setRole} setGame={setGame} />
       )}
@@ -454,18 +454,18 @@ function Home() {
         )}
       </AnimatePresence>
 
-      <Header role={role} options={options} />
-      <div className="fixed w-full mt-24 xs:max-md:mt-20 h-[calc(100vh_-_6rem)] xs:max-md:h-[calc(100vh_-_5rem)] xs:max-md:px-5 flex flex-col items-center justify-center bg-[rgb(20,23,227)]/90 py-5 layout">
-        <div className="absolute w-full top-5 space-y-2 xs:max-md:top-0 bg-red-40">
+      <Header role={role} options={options} scores={scores} turn={turn} />
+      <div className="relative w-full mt-24 xs:max-md:mt-0 h-[calc(100vh_-_6rem)] xs:max-md:h-aut xs:max-md:h-[calc(100vh_-_5rem)] xs:max-md:px-10 flex flex-col items-center justify-center bg-[rgb(20,23,227)]/90 py-5 layout">
+        <div className="absolute w-full top-5 space-y-2 xs:max-md:top-2 xs:max-md:space-y-0 bg-red-40">
           <h1 className=" w-full top-10 xs:max-md:top-2 text-center text-3xl xs:max-md:text-lg font-bold text-white">
             THE ULTIMATE TIC-TAC-TOE
           </h1>
           <p className="text-center xs:max-md:text-sm font-medium text-white">
-            <q className="">{options[turn].name}</q> turn to play
+            <q className="text-yellow-500">{options[turn].name}</q> turn to play
           </p>
         </div>
 
-        <ul className="relative z-30 portrait:w-[70%] xs:max-md:portrait:w-[100%] landscape:h-[70%] aspect-square max-w-[600px] grid grid-cols-3 board bg-red-40 ">
+        <ul className="xs:max-md:mt- relative z-30 portrait:w-[70%] xs:max-md:portrait:w-[100%] landscape:h-[70%] aspect-square max-w-[600px] grid grid-cols-3 board bg-red-40 ">
           {positions.map((square, index) => {
             return (
               <li
@@ -487,7 +487,7 @@ function Home() {
           })}
         </ul>
 
-        <div className="fixed w-full left-0 bottom-10 xs:max-md:bottom-6 xs:max-md:px-5">
+        <div className="xs:max-md:hidden fixed w-full left-0 bottom-10 xs:max-md:bottom-6 xs:max-md:px-5">
           <div className="w-full max-w-[400px] mx-auto">
             <div className="w-full mx-auto h-10 xs:max-md:h-8 flex justify-between items-center">
               {/* player 1 */}

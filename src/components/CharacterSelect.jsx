@@ -35,7 +35,7 @@ function CharacterSelect({ role, setRole, setGame }) {
         e.preventDefault();
         setGame();
       }}
-      className="fixed top-0 z-10 h-screen w-full bg-white flex flex-col gap-2 items-center justify-center"
+      className="fixed top-0 z-20 h-screen w-full bg-white flex flex-col gap-2 items-center justify-center"
     >
       <div className="xs:max-md:w-[80%] space-y-5 mx-auto bg-red-40">
         <motion.div
