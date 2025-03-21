@@ -1,9 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import avatar1 from "../images/avatar1.svg";
-import avatar2 from "../images/avatar2.svg";
-
 import { motion } from "motion/react";
+import { Game } from "../utils/game";
 
 WinnerModal.propTypes = {
   playAgain: PropTypes.func,
@@ -12,22 +10,11 @@ WinnerModal.propTypes = {
 };
 
 function WinnerModal({ playAgain, quit, winner }) {
-  const options = {
-    one: {
-      image: avatar1,
-      name: "CPU",
-    },
-    two: {
-      image: avatar2,
-      name: "CPU",
-    },
-    none: {
-      image: "",
-      name: "",
-    },
-  };
+  const options = new Game().getOptions();
 
   const role = winner;
+  const isValidRole = role === "one" || role === "two";
+
   return (
     <motion.div
       initial={{ x: 0, scale: 0.5, borderRadius: 40 }}
@@ -43,26 +30,45 @@ function WinnerModal({ playAgain, quit, winner }) {
       >
         <div className="">
           <div className="flex justify-center gap-5">
-            {role === "one" || role === "two" ? (
-              <figure className="size-40 xs:max-md:size-32">
-                <img
-                  src={options[role].image}
+            {isValidRole ? (
+              <figure className="size-40 xs:max-md:size-32 layout">
+                <motion.img
+                  animate={{ rotateX: [0, 360] }}
+                  transition={{
+                    repeat: Infinity,
+                    duration: 2,
+                    ease: "circOut",
+                  }}
+                  src={options[role].modalImage}
                   alt="avatar 1"
-                  className={`object-cover object-center size-ful border-2 border-black `}
+                  className={`object-cover object-center size-ful border-2 border-black board`}
                 />
               </figure>
             ) : (
               <>
-                <figure className="size-40 xs:max-md:size-32">
-                  <img
-                    src={options["one"].image}
+                <figure className="size-40 xs:max-md:size-32 ">
+                  <motion.img
+                    animate={{ rotateY: [0, 360] }}
+                    transition={{
+                      repeat: Infinity,
+                      duration: 2,
+                      ease: "linear",
+                    }}
+                    src={options["one"].modalImage}
                     alt="avatar 1"
                     className={`object-cover object-center size-ful border-2 border-black `}
                   />
                 </figure>
-                <figure className="size-40 xs:max-md:size-32">
-                  <img
-                    src={options["two"].image}
+                <figure className="size-40 xs:max-md:size-32 ">
+                  <motion.img
+                    animate={{ rotateY: [360, 0] }}
+                    transition={{
+                      repeat: Infinity,
+                      duration: 2,
+                      ease: "linear",
+                      delay: 1,
+                    }}
+                    src={options["two"].modalImage}
                     alt="avatar 1"
                     className={`object-cover object-center size-ful border-2 border-black `}
                   />
@@ -71,15 +77,22 @@ function WinnerModal({ playAgain, quit, winner }) {
             )}
           </div>
 
-          <p className="mt-2 font-bold text-white text-3xl text-center">
-            {role === "one" || role === "two" ? " WINNER!" : "DRAW!"}
-          </p>
+          <div>
+            <p className="mt-2 font-bold text-white text-3xl text-center">
+              {isValidRole ? " WINNER!" : "DRAW!"}
+            </p>
+            {isValidRole && (
+              <p className="mt-2 font-bold text-slate-300 animate-pulse text-3xl text-center">
+                {options[role].name}
+              </p>
+            )}
+          </div>
         </div>
         <div className="flex gap-20 xs:max-md:gap-5">
           <div>
             <button
               onClick={playAgain}
-              className="w-32 xs:max-md:w-28 py-1 rounded-md bg-[#EAD70C] font-medium"
+              className="w-32 xs:max-md:w-28 py-1 rounded-md bg-[#EAD70C] hover:bg-opacity-80 font-medium"
             >
               Play Again
             </button>
@@ -87,7 +100,7 @@ function WinnerModal({ playAgain, quit, winner }) {
           <div>
             <button
               onClick={quit}
-              className="w-32 xs:max-md:w-28 py-1 rounded-md bg-[#EA130C] font-medium"
+              className="w-32 xs:max-md:w-28 py-1 rounded-md bg-[#EA130C] hover:bg-opacity-80 text-white font-medium"
             >
               Quit
             </button>

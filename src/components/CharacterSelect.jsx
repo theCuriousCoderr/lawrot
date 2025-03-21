@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import avatar1 from "../images/avatar3.svg";
 import avatar2 from "../images/avatar4.svg";
 import { motion } from "motion/react";
+import { Game } from "../utils/game";
 
 CharacterSelect.propTypes = {
   role: PropTypes.object,
@@ -10,16 +11,7 @@ CharacterSelect.propTypes = {
 };
 
 function CharacterSelect({ role, setRole, setGame }) {
-  const options = {
-    one: {
-      image: avatar1,
-      name: "STEVEN THE OWL",
-    },
-    two: {
-      image: avatar2,
-      name: "OFFMYLAWN",
-    },
-  };
+  const options = new Game().getOptions();
 
   const transition = {
     duration: 0.1,
@@ -42,7 +34,7 @@ function CharacterSelect({ role, setRole, setGame }) {
           initial={{ x: -200 }}
           animate={{ x: 0, skewX: -12 }}
           transition={{ duration: 0.3 }}
-          className=" bg-black p-2 w-80 space-y-2 w-full"
+          className=" bg-black p-2 space-y-2 w-full"
         >
           <p className="text-center font-medium text-2xl text-white">
             Name Select
@@ -52,7 +44,6 @@ function CharacterSelect({ role, setRole, setGame }) {
             required={true}
             readOnly={true}
             disabled={true}
-            // onChange={handleChange}
             value={options[role.player].name}
             className="bg-slate-200 text-slate-600 font-medium w-full p-2"
           />
@@ -62,7 +53,7 @@ function CharacterSelect({ role, setRole, setGame }) {
           initial={{ x: 200, display: "none" }}
           animate={{ x: 0, skewX: -12, display: "block" }}
           transition={{ duration: 0.3, delay: 0 }}
-          className="relative w-full z-10 bg-black p-2 w-80 space-y-2"
+          className="relative w-full z-10 bg-black p-2 space-y-2"
         >
           <p className="text-center font-medium text-2xl text-white">
             Character Select
@@ -73,7 +64,6 @@ function CharacterSelect({ role, setRole, setGame }) {
               initial={{ y: -hide }}
               animate={{ y: 0 }}
               transition={transition}
-              // whileHover={{ scale: 0.75 }}
               className={`relative w-full aspect-square bg-[#7BD0E8] ${
                 role.player === "two" ? "opacity-50" : "border-white border-2"
               }`}
@@ -81,7 +71,6 @@ function CharacterSelect({ role, setRole, setGame }) {
               <button
                 type="button"
                 onClick={() => {
-                  // handleChange();
                   setRole({ player: "one", cpu: "two" });
                 }}
                 className="size-full"
@@ -99,7 +88,6 @@ function CharacterSelect({ role, setRole, setGame }) {
               initial={{ y: hide }}
               animate={{ y: 0 }}
               transition={transition}
-              // whileHover={{ scale: 0.75 }}
               className={`relative w-full aspect-square bg-[#1417E3] ${
                 role.player === "one" ? "opacity-50" : "border-white border-2"
               }`}
@@ -107,7 +95,6 @@ function CharacterSelect({ role, setRole, setGame }) {
               <button
                 type="button"
                 onClick={() => {
-                  // handleChange();
                   setRole({ player: "two", cpu: "one" });
                 }}
                 className="size-full"
