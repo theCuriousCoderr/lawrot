@@ -236,32 +236,12 @@ class Game {
 
     if (turn !== this.role.cpu) return;
 
-    // const playerHasPlayed = this.moves.playerMoves.length > 0;
-    // const isPlayerFirstMove =
-    //   board.filter((spot) => spot === "none").length === 8;
     let spotToPlay = 0;
     if (gameMode === "Easy") {
       spotToPlay = this.cpuSpotToPlay(board);
     } else {
       spotToPlay = this.cpuSpotToPlayHardMode(board);
     }
-
-    // if (playerHasPlayed && isPlayerFirstMove) {
-    //   const playerFirstMoveIsAtEdge = this.edgeSpots.includes(
-    //     this.moves.playerMoves[0]
-    //   );
-    //   const playerFirstMoveAtMiddle = this.moves.playerMoves[0] === 4;
-
-    //   if (playerFirstMoveIsAtEdge) {
-    //     spotToPlay = 4; // middle spot
-    //   } else if (playerFirstMoveAtMiddle) {
-    //     spotToPlay = this.edgeSpots[Math.round(Math.random() * 3)]; //any of the edges
-    //   } else {
-    //     spotToPlay = this.cpuSpotToPlay(board);
-    //   }
-    // } else {
-    //   spotToPlay = this.cpuSpotToPlay(board);
-    // }
 
     spotToPlay = Number(spotToPlay);
     let boardCopy = [...board];
