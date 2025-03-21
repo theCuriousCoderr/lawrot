@@ -34,7 +34,7 @@ function Board({
   const options = new Game().getOptions();
 
   return (
-    <ul className="xs:max-md:mt- relative z-30 portrait:w-[70%] xs:max-md:portrait:w-[100%] landscape:h-[70%] aspect-square max-w-[600px] grid grid-cols-3 board bg-red-40 ">
+    <ul className="xs:max-md:mt-20 relative z-30 portrait:w-[70%] xs:max-md:portrait:w-[100%] landscape:h-[70%] aspect-square max-w-[600px] grid grid-cols-3 board bg-red-40 ">
       {positions.map((role, index) => {
         return (
           <li

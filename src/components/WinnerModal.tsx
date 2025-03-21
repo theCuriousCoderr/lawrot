@@ -82,7 +82,7 @@ function WinnerModal({ playAgain, quit, winner }) {
               {isValidRole ? " WINNER!" : "DRAW!"}
             </p>
             {isValidRole && (
-              <p className="mt-2 font-bold text-slate-300 animate-pulse text-3xl text-center">
+              <p className=" font-bold text-slate-300 animate-pulse text-3xl text-center">
                 {options[role].name}
               </p>
             )}

@@ -181,7 +181,7 @@ function Home() {
           <h1 className=" w-full top-10 xs:max-md:top-2 text-center text-3xl xs:max-md:text-lg font-bold text-white">
             THE ULTIMATE TIC-TAC-TOE
           </h1>
-          <p className=" w-full top-10 xs:max-md:top-2 text-center text-3xl xs:max-md:text-lg font-bold text-white">
+          <p className=" w-full xs:max-md:top-2 text-center text-3xl xs:max-md:text-lg font-bold text-white">
             Round: {totalGames}
           </p>
 
